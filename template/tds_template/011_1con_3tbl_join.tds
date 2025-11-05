@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20242.24.1213.1118                               -->
+<datasource formatted-name='federated.0cu9yhd07sa32b18441wp1m0gfvb' inline='true' source-platform='linux' version='18.1' xml:base='http://t.tableau-report.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+    <document-format-change-manifest>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+        <_.fcp.ObjectModelRelationshipPerfOptions.true...ObjectModelRelationshipPerfOptions />
+        <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+        <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    </document-format-change-manifest>
+    <repository-location id='011_multiple_test_table' path='/t/ict_1/datasources' revision='1.0' site='ict_1' />
+    <connection class='federated'>
+        <named-connections>
+            <named-connection caption='3.35.93.207' name='postgres.1sohnju06vuuj111rxvtv1delsa9'>
+                <connection authentication='username-password' class='postgres' dbname='misolution_dev' one-time-sql='' port='5432' server='3.35.93.207' username='postgres' workgroup-auth-mode='' />
+            </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='postgres.1sohnju06vuuj111rxvtv1delsa9' name='test' table='[public].[test]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+            <relation connection='postgres.1sohnju06vuuj111rxvtv1delsa9' name='test' table='[public].[test]' type='table' />
+            <relation connection='postgres.1sohnju06vuuj111rxvtv1delsa9' name='test2' table='[public].[test]' type='table' />
+            <relation connection='postgres.1sohnju06vuuj111rxvtv1delsa9' name='test1' table='[public].[test]' type='table' />
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+            <map key='[id (test1)]' value='[test1].[id]' />
+            <map key='[id (test2)]' value='[test2].[id]' />
+            <map key='[id]' value='[test].[id]' />
+        </cols>
+    </connection>
+    <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+            <object caption='test' id='object_0000'>
+                <properties context=''>
+                    <relation connection='postgres.1sohnju06vuuj111rxvtv1delsa9' name='test' table='[public].[test]' type='table' />
+                </properties>
+            </object>
+            <object caption='test2' id='object_0001'>
+                <properties context=''>
+                    <relation connection='postgres.1sohnju06vuuj111rxvtv1delsa9' name='test2' table='[public].[test]' type='table' />
+                </properties>
+            </object>
+            <object caption='test1' id='object_0002'>
+                <properties context=''>
+                    <relation connection='postgres.1sohnju06vuuj111rxvtv1delsa9' name='test1' table='[public].[test]' type='table' />
+                </properties>
+            </object>
+        </objects>
+        <relationships>
+            <relationship>
+                <expression op='='>
+                    <expression op='[id]' />
+                    <expression op='[id (test2)]' />
+                </expression>
+                <first-end-point object-id='object_0000'  />
+                <second-end-point object-id='object_0001'  />
+            </relationship>
+            <relationship>
+                <expression op='='>
+                    <expression op='[id (test2)]' />
+                    <expression op='[id (test1)]' />
+                </expression>
+                <first-end-point object-id='object_0001'  />
+                <second-end-point object-id='object_0002'  />
+            </relationship>
+        </relationships>
+    </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+</datasource>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<datasource formattedName="federated.1ftxJ99Qp762wJOIl6iwrqikGj7H" inline="true" source-platform="linux" version="18.1" xml:base="https://t.tableau-report.com" xmlns:user="http://www.tableausoftware.com/xml/user">
+  <document-format-change-manifest>
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy/>
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType/>
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel/>
+  </document-format-change-manifest>
+  <repository-location id="Kb9cvzAMDQiHguGQq3gaQ8rHRXY3" path="/t/ict_1/datasources" revision="1.0" site="ict_1"/>
+  <connection class="federated">
+    <named-connections>
+      <named-connection caption="3.35.93.207" name="postgres.xv7qoyEQMs8aoMULj9lf4qIPurmH">
+        <connection authentication="username-password" class="postgres" dbname="misolution_dev" one-time-sql="" port="5432" server="3.35.93.207" username="postgres" workgroup-auth-mode=""/>
+      </named-connection>
+    </named-connections>
+    <_.fcp.ObjectModelEncapsulateLegacy.true...relation type="collection">
+      <_.fcp.ObjectModelSharedDimensions.true...relation connection="postgres.xv7qoyEQMs8aoMULj9lf4qIPurmH" name="test" table="[public].[test]" type="table"/>
+      <_.fcp.ObjectModelSharedDimensions.true...relation connection="postgres.xv7qoyEQMs8aoMULj9lf4qIPurmH" name="test2" table="[public].[test]" type="table"/>
+      <_.fcp.ObjectModelSharedDimensions.true...relation connection="postgres.xv7qoyEQMs8aoMULj9lf4qIPurmH" name="test1" table="[public].[test]" type="table"/>
+      <_.fcp.ObjectModelSharedDimensions.true...relation connection="postgres.xv7qoyEQMs8aoMULj9lf4qIPurmH" name="migration_account" table="[ict].[migration_account]" type="table"/>
+      <_.fcp.ObjectModelSharedDimensions.true...relation connection="postgres.xv7qoyEQMs8aoMULj9lf4qIPurmH" name="migration_account2" table="[ict].[migration_account]" type="table"/>
+      <_.fcp.ObjectModelSharedDimensions.true...relation connection="postgres.xv7qoyEQMs8aoMULj9lf4qIPurmH" name="migration_account1" table="[ict].[migration_account]" type="table"/>
+    </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+  </connection>
+  <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    <objects>
+      <_.fcp.ObjectModelSharedDimensions.true...object caption="test" id="object_0000000001_nHM63jbTRa">
+        <properties context="">
+          <relation connection="postgres.xv7qoyEQMs8aoMULj9lf4qIPurmH" name="test" table="[public].[test]" type="table"/>
+        </properties>
+      </_.fcp.ObjectModelSharedDimensions.true...object>
+      <_.fcp.ObjectModelSharedDimensions.true...object caption="test2" id="object_0000000002_gNrbvHqzoY">
+        <properties context="">
+          <relation connection="postgres.xv7qoyEQMs8aoMULj9lf4qIPurmH" name="test2" table="[public].[test]" type="table"/>
+        </properties>
+      </_.fcp.ObjectModelSharedDimensions.true...object>
+      <_.fcp.ObjectModelSharedDimensions.true...object caption="test1" id="object_0000000003_UnuU8Oe1hQ">
+        <properties context="">
+          <relation connection="postgres.xv7qoyEQMs8aoMULj9lf4qIPurmH" name="test1" table="[public].[test]" type="table"/>
+        </properties>
+      </_.fcp.ObjectModelSharedDimensions.true...object>
+      <_.fcp.ObjectModelSharedDimensions.true...object caption="migration_account" id="object_0000000004_IHcnfFlq6f">
+        <properties context="">
+          <relation connection="postgres.xv7qoyEQMs8aoMULj9lf4qIPurmH" name="migration_account" table="[ict].[migration_account]" type="table"/>
+        </properties>
+      </_.fcp.ObjectModelSharedDimensions.true...object>
+      <_.fcp.ObjectModelSharedDimensions.true...object caption="migration_account2" id="object_0000000005_obrqWpQFzo">
+        <properties context="">
+          <relation connection="postgres.xv7qoyEQMs8aoMULj9lf4qIPurmH" name="migration_account2" table="[ict].[migration_account]" type="table"/>
+        </properties>
+      </_.fcp.ObjectModelSharedDimensions.true...object>
+      <_.fcp.ObjectModelSharedDimensions.true...object caption="migration_account1" id="object_0000000006_F6vCkz2kfR">
+        <properties context="">
+          <relation connection="postgres.xv7qoyEQMs8aoMULj9lf4qIPurmH" name="migration_account1" table="[ict].[migration_account]" type="table"/>
+        </properties>
+      </_.fcp.ObjectModelSharedDimensions.true...object>
+    </objects>
+    <relationships/>
+  </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+</datasource>

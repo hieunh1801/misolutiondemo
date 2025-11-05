@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<datasources>
+  <datasource formattedName="federated.5f6d883f-126a-481f-a9db-a18dad2b61f2" inline="true" source-platform="linux" version="18.1" xmlns:user="http://www.tableausoftware.com/xml/user">
+    <document-format-change-manifest>
+      <ObjectModelEncapsulateLegacy>
+        <ObjectModelTableType>
+          <SchemaViewerObjectModel/>
+        </ObjectModelTableType>
+      </ObjectModelEncapsulateLegacy>
+    </document-format-change-manifest>
+    <connection class="federated"/>
+  </datasource>
+</datasources>

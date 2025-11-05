@@ -1,0 +1,215 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20242.24.1213.1118                               -->
+<datasource formatted-name='federated.0cu9yhd07sa32b18441wp1m0gfvb' inline='true' source-platform='linux' version='18.1' xml:base='http://t.tableau-report.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+    <document-format-change-manifest>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+        <_.fcp.ObjectModelSharedDimensions.true...ObjectModelSharedDimensions />
+        <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+        <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    </document-format-change-manifest>
+    <repository-location id='011_multiple_test_table' path='/t/ict_1/datasources' revision='1.0' site='ict_1' />
+    <connection class='federated'>
+        <named-connections>
+            <named-connection caption='3.35.93.207' name='postgres.1sohnju06vuuj111rxvtv1delsa9'>
+                <connection authentication='username-password' class='postgres' dbname='misolution_dev' one-time-sql='' port='5432' server='3.35.93.207' username='postgres' workgroup-auth-mode='' />
+            </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='postgres.1sohnju06vuuj111rxvtv1delsa9' name='test' table='[public].[test]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+            <_.fcp.ObjectModelSharedDimensions.true...relation connection='postgres.1sohnju06vuuj111rxvtv1delsa9' name='test' table='[public].[test]' type='table' />
+            <_.fcp.ObjectModelSharedDimensions.true...relation connection='postgres.1sohnju06vuuj111rxvtv1delsa9' name='test2' table='[public].[test]' type='table' />
+            <_.fcp.ObjectModelSharedDimensions.true...relation connection='postgres.1sohnju06vuuj111rxvtv1delsa9' name='test1' table='[public].[test]' type='table' />
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+            <map key='[description (test1)]' value='[test1].[description]' />
+            <map key='[description (test2)]' value='[test2].[description]' />
+            <map key='[description]' value='[test].[description]' />
+            <map key='[id (test1)]' value='[test1].[id]' />
+            <map key='[id (test2)]' value='[test2].[id]' />
+            <map key='[id]' value='[test].[id]' />
+            <map key='[name (test1)]' value='[test1].[name]' />
+            <map key='[name (test2)]' value='[test2].[name]' />
+            <map key='[name]' value='[test].[name]' />
+        </cols>
+        <metadata-records>
+            <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+                <remote-name>id</remote-name>
+                <remote-type>20</remote-type>
+                <local-name>[id]</local-name>
+                <parent-name>[test]</parent-name>
+                <remote-alias>id</remote-alias>
+                <ordinal>1</ordinal>
+                <local-type>integer</local-type>
+                <aggregation>Sum</aggregation>
+                <precision>19</precision>
+                <contains-null>false</contains-null>
+                <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[test_029663E5DB124DEDB2E29946595CE998]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+            <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+                <remote-name>name</remote-name>
+                <remote-type>129</remote-type>
+                <local-name>[name]</local-name>
+                <parent-name>[test]</parent-name>
+                <remote-alias>name</remote-alias>
+                <ordinal>2</ordinal>
+                <local-type>string</local-type>
+                <aggregation>Count</aggregation>
+                <width>2147483647</width>
+                <contains-null>true</contains-null>
+                <collation flag='0' name='LEN_RUS' />
+                <attributes>
+                    <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+                </attributes>
+                <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[test_029663E5DB124DEDB2E29946595CE998]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+            <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+                <remote-name>description</remote-name>
+                <remote-type>129</remote-type>
+                <local-name>[description]</local-name>
+                <parent-name>[test]</parent-name>
+                <remote-alias>description</remote-alias>
+                <ordinal>3</ordinal>
+                <local-type>string</local-type>
+                <aggregation>Count</aggregation>
+                <width>2147483647</width>
+                <contains-null>true</contains-null>
+                <collation flag='0' name='LEN_RUS' />
+                <attributes>
+                    <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+                </attributes>
+                <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[test_029663E5DB124DEDB2E29946595CE998]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+            <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+                <remote-name>id</remote-name>
+                <remote-type>20</remote-type>
+                <local-name>[id (test2)]</local-name>
+                <parent-name>[test2]</parent-name>
+                <remote-alias>id</remote-alias>
+                <ordinal>5</ordinal>
+                <local-type>integer</local-type>
+                <aggregation>Sum</aggregation>
+                <precision>19</precision>
+                <contains-null>false</contains-null>
+                <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[test_3750B89FED8B49C2806434A25C410E84]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+            <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+                <remote-name>name</remote-name>
+                <remote-type>129</remote-type>
+                <local-name>[name (test2)]</local-name>
+                <parent-name>[test2]</parent-name>
+                <remote-alias>name</remote-alias>
+                <ordinal>6</ordinal>
+                <local-type>string</local-type>
+                <aggregation>Count</aggregation>
+                <width>2147483647</width>
+                <contains-null>true</contains-null>
+                <collation flag='0' name='LEN_RUS' />
+                <attributes>
+                    <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+                </attributes>
+                <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[test_3750B89FED8B49C2806434A25C410E84]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+            <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+                <remote-name>description</remote-name>
+                <remote-type>129</remote-type>
+                <local-name>[description (test2)]</local-name>
+                <parent-name>[test2]</parent-name>
+                <remote-alias>description</remote-alias>
+                <ordinal>7</ordinal>
+                <local-type>string</local-type>
+                <aggregation>Count</aggregation>
+                <width>2147483647</width>
+                <contains-null>true</contains-null>
+                <collation flag='0' name='LEN_RUS' />
+                <attributes>
+                    <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+                </attributes>
+                <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[test_3750B89FED8B49C2806434A25C410E84]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+            <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+                <remote-name>id</remote-name>
+                <remote-type>20</remote-type>
+                <local-name>[id (test1)]</local-name>
+                <parent-name>[test1]</parent-name>
+                <remote-alias>id</remote-alias>
+                <ordinal>9</ordinal>
+                <local-type>integer</local-type>
+                <aggregation>Sum</aggregation>
+                <precision>19</precision>
+                <contains-null>false</contains-null>
+                <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[test_C4A4AF708A40490A9DF11738FA939B5B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+            <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+                <remote-name>name</remote-name>
+                <remote-type>129</remote-type>
+                <local-name>[name (test1)]</local-name>
+                <parent-name>[test1]</parent-name>
+                <remote-alias>name</remote-alias>
+                <ordinal>10</ordinal>
+                <local-type>string</local-type>
+                <aggregation>Count</aggregation>
+                <width>2147483647</width>
+                <contains-null>true</contains-null>
+                <collation flag='0' name='LEN_RUS' />
+                <attributes>
+                    <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+                </attributes>
+                <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[test_C4A4AF708A40490A9DF11738FA939B5B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+            <_.fcp.ObjectModelSharedDimensions.true...metadata-record class='column'>
+                <remote-name>description</remote-name>
+                <remote-type>129</remote-type>
+                <local-name>[description (test1)]</local-name>
+                <parent-name>[test1]</parent-name>
+                <remote-alias>description</remote-alias>
+                <ordinal>11</ordinal>
+                <local-type>string</local-type>
+                <aggregation>Count</aggregation>
+                <width>2147483647</width>
+                <contains-null>true</contains-null>
+                <collation flag='0' name='LEN_RUS' />
+                <attributes>
+                    <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+                </attributes>
+                <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[test_C4A4AF708A40490A9DF11738FA939B5B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </_.fcp.ObjectModelSharedDimensions.true...metadata-record>
+        </metadata-records>
+    </connection>
+    <aliases enabled='yes' />
+    <_.fcp.ObjectModelTableType.true...column caption='test' datatype='table' name='[__tableau_internal_object_id__].[test_029663E5DB124DEDB2E29946595CE998]' role='measure' type='quantitative' />
+    <_.fcp.ObjectModelTableType.true...column caption='test2' datatype='table' name='[__tableau_internal_object_id__].[test_3750B89FED8B49C2806434A25C410E84]' role='measure' type='quantitative' />
+    <_.fcp.ObjectModelTableType.true...column caption='test1' datatype='table' name='[__tableau_internal_object_id__].[test_C4A4AF708A40490A9DF11738FA939B5B]' role='measure' type='quantitative' />
+    <column caption='Description (Test1)' datatype='string' name='[description (test1)]' role='dimension' type='nominal' />
+    <column caption='Description (Test2)' datatype='string' name='[description (test2)]' role='dimension' type='nominal' />
+    <column caption='Description' datatype='string' name='[description]' role='dimension' type='nominal' />
+    <column caption='Id (Test1)' datatype='integer' name='[id (test1)]' role='dimension' type='ordinal' />
+    <column caption='Id (Test2)' datatype='integer' name='[id (test2)]' role='dimension' type='ordinal' />
+    <column caption='Id' datatype='integer' name='[id]' role='dimension' type='ordinal' />
+    <column caption='Name (Test1)' datatype='string' name='[name (test1)]' role='dimension' type='nominal' />
+    <column caption='Name (Test2)' datatype='string' name='[name (test2)]' role='dimension' type='nominal' />
+    <column caption='Name' datatype='string' name='[name]' role='dimension' type='nominal' />
+    <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+    <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+    </semantic-values>
+    <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+            <_.fcp.ObjectModelSharedDimensions.true...object caption='test' id='test_029663E5DB124DEDB2E29946595CE998'>
+                <properties context=''>
+                    <relation connection='postgres.1sohnju06vuuj111rxvtv1delsa9' name='test' table='[public].[test]' type='table' />
+                </properties>
+            </_.fcp.ObjectModelSharedDimensions.true...object>
+            <_.fcp.ObjectModelSharedDimensions.true...object caption='test2' id='test_3750B89FED8B49C2806434A25C410E84'>
+                <properties context=''>
+                    <relation connection='postgres.1sohnju06vuuj111rxvtv1delsa9' name='test2' table='[public].[test]' type='table' />
+                </properties>
+            </_.fcp.ObjectModelSharedDimensions.true...object>
+            <_.fcp.ObjectModelSharedDimensions.true...object caption='test1' id='test_C4A4AF708A40490A9DF11738FA939B5B'>
+                <properties context=''>
+                    <relation connection='postgres.1sohnju06vuuj111rxvtv1delsa9' name='test1' table='[public].[test]' type='table' />
+                </properties>
+            </_.fcp.ObjectModelSharedDimensions.true...object>
+        </objects>
+    </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+</datasource>

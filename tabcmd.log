@@ -1,0 +1,1841 @@
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1_connection_live_1_table_builder.tdsMetadata' to the server. This could take several minutes...
+Publishing 008_1_connection_live_1_table_builder.tdsMetadata to server
+Published 008_1_connection_live_1_table_builder.tdsMetadata (ID: 4cb2dcd8-f8d4-460d-a6e4-7c4dc0b19f75)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6291
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1_connection_live_1_table_builder_1762216577669.tdsMetadata' to the server. This could take several minutes...
+Publishing 008_1_connection_live_1_table_builder_1762216577669.tdsMetadata to server
+Published 008_1_connection_live_1_table_builder_1762216577669.tdsMetadata (ID: 2cf54ab3-b0cc-413b-931f-3f7f5304d2b7)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6292
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_2Table_1762216871813.tdsMetadata' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_2Table_1762216871813.tdsMetadata to server
+Published 008_1LiveConnection_2Table_1762216871813.tdsMetadata (ID: cb4081da-8938-44fe-a760-d4230a029265)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6293
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_1Table_1762217270586.tdsMetadata' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_1Table_1762217270586.tdsMetadata to server
+Published 008_1LiveConnection_1Table_1762217270586.tdsMetadata (ID: 44414ceb-ec6d-488f-9998-0f94b4b49bb2)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6294
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_2Table_1762217410442.tdsMetadata' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_2Table_1762217410442.tdsMetadata to server
+Published 008_1LiveConnection_2Table_1762217410442.tdsMetadata (ID: e961531c-8d6e-413f-8f91-78fdd5e20878)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6295
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_2Table_1762217732798.tdsMetadata' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_2Table_1762217732798.tdsMetadata to server
+Published 008_1LiveConnection_2Table_1762217732798.tdsMetadata (ID: baa32b56-4275-43d8-a19c-0aa74e3e61e3)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6296
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_2Table_1762217915708.tdsMetadata' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_2Table_1762217915708.tdsMetadata to server
+Published 008_1LiveConnection_2Table_1762217915708.tdsMetadata (ID: 8f510dfc-110b-4910-9e2d-67d2f5f438bc)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6297
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_2Table_1762218652882.tdsMetadata' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_2Table_1762218652882.tdsMetadata to server
+Published 008_1LiveConnection_2Table_1762218652882.tdsMetadata (ID: 6962a55b-5918-463f-b0a8-65a6332467ec)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6298
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_2Table_1762219165759.tdsMetadata' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_2Table_1762219165759.tdsMetadata to server
+Published 008_1LiveConnection_2Table_1762219165759.tdsMetadata (ID: 85113b63-b8f8-439b-8a18-f71c13ac0d1f)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6299
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_2Table_1762221038404.tdsMetadata' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_2Table_1762221038404.tdsMetadata to server
+Published 008_1LiveConnection_2Table_1762221038404.tdsMetadata (ID: 013b8f67-aa8d-42e0-a9ae-55ae6f117ed9)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6301
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_2Table.tdsMetadata' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_2Table.tdsMetadata to server
+Published 008_1LiveConnection_2Table.tdsMetadata (ID: b02f31ba-f1f5-4986-9fed-f011fcc9f1e3)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6302
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_2Table.tdsMetadata' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_2Table.tdsMetadata to server
+Published 008_1LiveConnection_2Table.tdsMetadata (ID: b02f31ba-f1f5-4986-9fed-f011fcc9f1e3)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6303
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_2Table.tdsMetadata' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_2Table.tdsMetadata to server
+Published 008_1LiveConnection_2Table.tdsMetadata (ID: b02f31ba-f1f5-4986-9fed-f011fcc9f1e3)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6304
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_2Table.tdsMetadata' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_2Table.tdsMetadata to server
+Published 008_1LiveConnection_2Table.tdsMetadata (ID: b02f31ba-f1f5-4986-9fed-f011fcc9f1e3)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6305
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_2Table.tdsMetadata' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_2Table.tdsMetadata to server
+Published 008_1LiveConnection_2Table.tdsMetadata (ID: b02f31ba-f1f5-4986-9fed-f011fcc9f1e3)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6306
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_2Table.tdsMetadata' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_2Table.tdsMetadata to server
+Published 008_1LiveConnection_2Table.tdsMetadata (ID: b02f31ba-f1f5-4986-9fed-f011fcc9f1e3)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6307
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_2Table.tdsMetadata' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_2Table.tdsMetadata to server
+Published 008_1LiveConnection_2Table.tdsMetadata (ID: b02f31ba-f1f5-4986-9fed-f011fcc9f1e3)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6308
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_2Table.tdsMetadata' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_2Table.tdsMetadata to server
+Published 008_1LiveConnection_2Table.tdsMetadata (ID: b02f31ba-f1f5-4986-9fed-f011fcc9f1e3)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6310
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_2Table.tdsMetadata' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_2Table.tdsMetadata to server
+Published 008_1LiveConnection_2Table.tdsMetadata (ID: b02f31ba-f1f5-4986-9fed-f011fcc9f1e3)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6311
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_2Table.tdsMetadata' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_2Table.tdsMetadata to server
+Published 008_1LiveConnection_2Table.tdsMetadata (ID: b02f31ba-f1f5-4986-9fed-f011fcc9f1e3)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6312
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_2Table.tdsMetadata' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_2Table.tdsMetadata to server
+Published 008_1LiveConnection_2Table.tdsMetadata (ID: b02f31ba-f1f5-4986-9fed-f011fcc9f1e3)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6314
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_2Table.tdsMetadata' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_2Table.tdsMetadata to server
+Published 008_1LiveConnection_2Table.tdsMetadata (ID: b02f31ba-f1f5-4986-9fed-f011fcc9f1e3)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6315
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_2Table.tdsMetadata' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_2Table.tdsMetadata to server
+Published 008_1LiveConnection_2Table.tdsMetadata (ID: b02f31ba-f1f5-4986-9fed-f011fcc9f1e3)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6316
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_2Table.tdsMetadata' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_2Table.tdsMetadata to server
+Published 008_1LiveConnection_2Table.tdsMetadata (ID: b02f31ba-f1f5-4986-9fed-f011fcc9f1e3)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6317
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_2Table.tdsMetadata' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_2Table.tdsMetadata to server
+Published 008_1LiveConnection_2Table.tdsMetadata (ID: b02f31ba-f1f5-4986-9fed-f011fcc9f1e3)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6318
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_2Table.tdsMetadata' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_2Table.tdsMetadata to server
+Published 008_1LiveConnection_2Table.tdsMetadata (ID: b02f31ba-f1f5-4986-9fed-f011fcc9f1e3)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6320
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_2Table.tdsMetadata' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_2Table.tdsMetadata to server
+Published 008_1LiveConnection_2Table.tdsMetadata (ID: b02f31ba-f1f5-4986-9fed-f011fcc9f1e3)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6321
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_2Table.tdsMetadata' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_2Table.tdsMetadata to server
+Published 008_1LiveConnection_2Table.tdsMetadata (ID: b02f31ba-f1f5-4986-9fed-f011fcc9f1e3)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6322
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_2Table.tdsMetadata' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_2Table.tdsMetadata to server
+Published 008_1LiveConnection_2Table.tdsMetadata (ID: b02f31ba-f1f5-4986-9fed-f011fcc9f1e3)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6323
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_1Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_1Table.tds to server
+Published 008_1LiveConnection_1Table.tds (ID: 7fa9d16e-31d5-45b5-95df-487da47ab1cd)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6328
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_2Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_2Table.tds to server
+Published 008_1LiveConnection_2Table.tds (ID: b02f31ba-f1f5-4986-9fed-f011fcc9f1e3)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6329
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_2Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_2Table.tds to server
+Published 008_1LiveConnection_2Table.tds (ID: b02f31ba-f1f5-4986-9fed-f011fcc9f1e3)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6330
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_2Table_Duplicate.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_2Table_Duplicate.tds to server
+Published 008_1LiveConnection_2Table_Duplicate.tds (ID: bef01b5a-c15f-41d3-81b2-e22cb36aca93)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6331
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_2Table_Duplicate.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_2Table_Duplicate.tds to server
+Published 008_1LiveConnection_2Table_Duplicate.tds (ID: bef01b5a-c15f-41d3-81b2-e22cb36aca93)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6332
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_2Table_Duplicate.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_2Table_Duplicate.tds to server
+Published 008_1LiveConnection_2Table_Duplicate.tds (ID: bef01b5a-c15f-41d3-81b2-e22cb36aca93)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6333
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_2Table_Duplicate.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_2Table_Duplicate.tds to server
+Published 008_1LiveConnection_2Table_Duplicate.tds (ID: bef01b5a-c15f-41d3-81b2-e22cb36aca93)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6335
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_2Table_Duplicate.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_2Table_Duplicate.tds to server
+Published 008_1LiveConnection_2Table_Duplicate.tds (ID: bef01b5a-c15f-41d3-81b2-e22cb36aca93)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6336
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_2Table_Duplicate.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_2Table_Duplicate.tds to server
+Published 008_1LiveConnection_2Table_Duplicate.tds (ID: bef01b5a-c15f-41d3-81b2-e22cb36aca93)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6337
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: d4632714-ef83-4c5b-9457-198fa2fe6977)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6338
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: d4632714-ef83-4c5b-9457-198fa2fe6977)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6339
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: d4632714-ef83-4c5b-9457-198fa2fe6977)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6341
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: d4632714-ef83-4c5b-9457-198fa2fe6977)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6342
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: d4632714-ef83-4c5b-9457-198fa2fe6977)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6343
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: d4632714-ef83-4c5b-9457-198fa2fe6977)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6344
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: d4632714-ef83-4c5b-9457-198fa2fe6977)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6345
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: d4632714-ef83-4c5b-9457-198fa2fe6977)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6346
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: d4632714-ef83-4c5b-9457-198fa2fe6977)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6347
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: d4632714-ef83-4c5b-9457-198fa2fe6977)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6348
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: d4632714-ef83-4c5b-9457-198fa2fe6977)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6349
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: d4632714-ef83-4c5b-9457-198fa2fe6977)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6350
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: d4632714-ef83-4c5b-9457-198fa2fe6977)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6351
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: d4632714-ef83-4c5b-9457-198fa2fe6977)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6352
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: d4632714-ef83-4c5b-9457-198fa2fe6977)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6353
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: d4632714-ef83-4c5b-9457-198fa2fe6977)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6354
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: d4632714-ef83-4c5b-9457-198fa2fe6977)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6355
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: d4632714-ef83-4c5b-9457-198fa2fe6977)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6356
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: d4632714-ef83-4c5b-9457-198fa2fe6977)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6357
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: d4632714-ef83-4c5b-9457-198fa2fe6977)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6358
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: d4632714-ef83-4c5b-9457-198fa2fe6977)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6359
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: d4632714-ef83-4c5b-9457-198fa2fe6977)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6360
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: 5bc35a9e-b461-4223-9180-c6ba118af066)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6361
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Replacing an extract is not yet implemented
+Traceback (most recent call last):
+  File "tabcmd\execution\tabcmd_controller.py", line 52, in run
+  File "tabcmd\commands\datasources_and_workbooks\publish_command.py", line 55, in run_command
+  File "tabcmd\commands\datasources_and_workbooks\publish_command.py", line 118, in get_publish_mode
+AttributeError: Replacing an extract is not yet implemented
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: 5bc35a9e-b461-4223-9180-c6ba118af066)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6362
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: 5bc35a9e-b461-4223-9180-c6ba118af066)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6363
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: 5bc35a9e-b461-4223-9180-c6ba118af066)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6364
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: 5bc35a9e-b461-4223-9180-c6ba118af066)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6365
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: 5bc35a9e-b461-4223-9180-c6ba118af066)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6366
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: 5bc35a9e-b461-4223-9180-c6ba118af066)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6367
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: 5bc35a9e-b461-4223-9180-c6ba118af066)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6368
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: 5bc35a9e-b461-4223-9180-c6ba118af066)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6369
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: 5bc35a9e-b461-4223-9180-c6ba118af066)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6372
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: 5bc35a9e-b461-4223-9180-c6ba118af066)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6373
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: 5bc35a9e-b461-4223-9180-c6ba118af066)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6374
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: 5bc35a9e-b461-4223-9180-c6ba118af066)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6375
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: 5bc35a9e-b461-4223-9180-c6ba118af066)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6376
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: 5bc35a9e-b461-4223-9180-c6ba118af066)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6377
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: 5bc35a9e-b461-4223-9180-c6ba118af066)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6378
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: 5bc35a9e-b461-4223-9180-c6ba118af066)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6379
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: 5bc35a9e-b461-4223-9180-c6ba118af066)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6380
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: 5bc35a9e-b461-4223-9180-c6ba118af066)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6381
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: 5bc35a9e-b461-4223-9180-c6ba118af066)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6382
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: 5bc35a9e-b461-4223-9180-c6ba118af066)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6383
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: 5bc35a9e-b461-4223-9180-c6ba118af066)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6384
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: 5bc35a9e-b461-4223-9180-c6ba118af066)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6385
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: 5bc35a9e-b461-4223-9180-c6ba118af066)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6386
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: 5bc35a9e-b461-4223-9180-c6ba118af066)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6387
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: 5bc35a9e-b461-4223-9180-c6ba118af066)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6388
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: 5bc35a9e-b461-4223-9180-c6ba118af066)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6390
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: 5bc35a9e-b461-4223-9180-c6ba118af066)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6391
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: 5bc35a9e-b461-4223-9180-c6ba118af066)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6392
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: 5bc35a9e-b461-4223-9180-c6ba118af066)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6393
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: 5bc35a9e-b461-4223-9180-c6ba118af066)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6394
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: 5bc35a9e-b461-4223-9180-c6ba118af066)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6395
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: 5bc35a9e-b461-4223-9180-c6ba118af066)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6396
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: c67af7a6-3549-4c78-ae1f-442d134c5f24)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6397
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: c67af7a6-3549-4c78-ae1f-442d134c5f24)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6398
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: c67af7a6-3549-4c78-ae1f-442d134c5f24)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6399
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: c67af7a6-3549-4c78-ae1f-442d134c5f24)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6400
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: c67af7a6-3549-4c78-ae1f-442d134c5f24)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6401
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: c67af7a6-3549-4c78-ae1f-442d134c5f24)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6402
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: c67af7a6-3549-4c78-ae1f-442d134c5f24)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6403
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: c67af7a6-3549-4c78-ae1f-442d134c5f24)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6404
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: c67af7a6-3549-4c78-ae1f-442d134c5f24)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6405
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: c67af7a6-3549-4c78-ae1f-442d134c5f24)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6406
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: c67af7a6-3549-4c78-ae1f-442d134c5f24)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6407
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: c67af7a6-3549-4c78-ae1f-442d134c5f24)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6408
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: c67af7a6-3549-4c78-ae1f-442d134c5f24)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6409
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: c67af7a6-3549-4c78-ae1f-442d134c5f24)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6410
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: c67af7a6-3549-4c78-ae1f-442d134c5f24)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6411
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: c67af7a6-3549-4c78-ae1f-442d134c5f24)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6412
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: c67af7a6-3549-4c78-ae1f-442d134c5f24)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6413
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: c67af7a6-3549-4c78-ae1f-442d134c5f24)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6414
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: c67af7a6-3549-4c78-ae1f-442d134c5f24)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6415
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: c67af7a6-3549-4c78-ae1f-442d134c5f24)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6416
+Tabcmd 2.0.18                 
+=====   Server: https://t.tableau-report.com
+=====   Username: milvus      
+=====   Token Name: misolution_dev__ict_1
+Tableau Server Site: ict_1    
+Connecting to the server...   
+versions: 3.23, 2.4           
+Signed into https://t.tableau-report.com as user with id 8bfb9887-1967-4b14-ab2f-97c9e5eb273b
+Querying single user (ID: 8bfb9887-1967-4b14-ab2f-97c9e5eb273b)
+Succeeded                     
+Querying all projects on site 
+Publishing './output/008_1LiveConnection_3Table.tds' to the server. This could take several minutes...
+Publishing 008_1LiveConnection_3Table.tds to server
+Published 008_1LiveConnection_3Table.tds (ID: c67af7a6-3549-4c78-ae1f-442d134c5f24)
+File successfully published to the server at the following location:
+https://t.tableau-report.com/#/site/ict_1/datasources/6417
