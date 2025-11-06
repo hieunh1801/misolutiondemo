@@ -53,6 +53,12 @@ public class TdsMetadata {
     }
 
     public void addRelationship(TdsRelationship tdsRelationship) {
+        TdsColumn col1 = tdsRelationship.getCol1();
+        TdsColumn col2 = tdsRelationship.getCol2();
+        if (col1.equals(col2)) {
+            new Exception("Col1 and Col2 are the same [" + col1.getName() + "] and [" + col2.getName() + "]").printStackTrace();
+            return;
+        }
         this.tdsRelationships.add(tdsRelationship);
         this.tdsRelationshipMap.put(tdsRelationship.getId(), tdsRelationship);
     }

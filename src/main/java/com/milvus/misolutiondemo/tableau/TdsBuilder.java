@@ -569,7 +569,7 @@ public class TdsBuilder {
         tdsMetadata.addRelationship(new TdsMetadata.TdsRelationship(conn2tbl1col, conn2tbl2col));
         tdsMetadata.addRelationship(new TdsMetadata.TdsRelationship(conn2tbl1col, conn2tbl3col));
         tdsMetadata.addRelationship(new TdsMetadata.TdsRelationship(conn3tbl1col, conn3tbl2col));
-        tdsMetadata.addRelationship(new TdsMetadata.TdsRelationship(conn3tbl1col, conn3tbl3col));
+        tdsMetadata.addRelationship(new TdsMetadata.TdsRelationship(conn3tbl1col, conn3tbl1col));
         tdsMetadata.addRelationship(new TdsMetadata.TdsRelationship(conn2tbl1col, conn3tbl2col));
         tdsMetadata.addRelationship(new TdsMetadata.TdsRelationship(conn2tbl2col, conn3tbl3col));
         tdsMetadata.addRelationship(new TdsMetadata.TdsRelationship(conn1tbl2col, conn3tbl1col));
