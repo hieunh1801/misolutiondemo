@@ -24,6 +24,10 @@ repositories {
     mavenCentral()
 }
 
+def os = System.getProperty("os.name").toLowerCase()
+def isWindows = os.contains("win")
+def isMac = os.contains("mac")
+def isLinux = os.contains("nix") || os.contains("nux") || os.contains("linux")
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.dom4j:dom4j:2.1.4'
@@ -34,6 +38,15 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    if (isWindows) {
+        implementation fileTree(dir: "./lib_windows", include: "*.jar")
+    } else if (isLinux) {
+        implementation fileTree(dir: "./lib_linux", include: "*.jar")
+    } else if (isMac) {
+        implementation fileTree(dir: "./lib_macos", include: "*.jar")
+        runtimeOnly("io.netty:netty-resolver-dns-native-macos:4.1.94.Final:osx-aarch_64")
+    }
 }
 
 tasks.named('test') {

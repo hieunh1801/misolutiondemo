@@ -6,6 +6,7 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 
+import javax.swing.*;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -64,62 +65,129 @@ public class TdsMetadata {
         return tdsTableMap.get(id);
     }
 
+    public TdsTable getTdsTableByObjectId(String objectId) {
+        return tdsTables.stream()
+                .filter(tbl -> tbl.getObjectId().equals(objectId))
+                .findFirst()
+                .orElse(null);
+    }
+
     public TdsColumn getTdsColumn(String id) {
         return tdsColumnMap.get(id);
     }
 
     public void compute() {
-        // compute tdsTables
         this.computeTdsTables();
         this.computeTdsColumns();
+        this.computeRelationships();
     }
 
     private void computeTdsTables() {
-        Map<String, List<TdsTable>> grouped = new HashMap<>();
-        // sort table by name
-        tdsTables.sort(Comparator.comparing(TdsTable::getName));
-        for (TdsTable t : tdsTables) {
-            grouped.computeIfAbsent(t.getName(), k -> new ArrayList<>()).add(t);
-        }
-        List<TdsTable> result = new ArrayList<>();
-        for (Map.Entry<String, List<TdsTable>> entry : grouped.entrySet()) {
-            List<TdsTable> group = entry.getValue();
-            // revert table name
-            if (group.size() > 1) {
-                int counter = group.size();
-                for (TdsTable t : group) {
-                    if (counter == group.size()) {
-                        // keep the first name
-                    } else {
-                        t.setName(t.getName() + counter);
-                    }
-                    counter--;
-                }
+        // STEP 1: update name of table
+        Map<String, Integer> nameCounts = new HashMap<>();
+        for (TdsTable table : tdsTables) {
+            String originalName = table.getName();
+            int count = nameCounts.getOrDefault(originalName, 0);
+            if (count > 0) {
+                String newName = originalName + count;
+                table.setName(newName);
             }
-            result.addAll(group);
+            nameCounts.put(originalName, count + 1);
         }
-
-        for (TdsTable tdsTable : result) {
+        tdsTables.sort(Comparator.comparing(TdsTable::getName));
+        for (TdsTable tdsTable : tdsTables) {
             int desiredLength = 10;
             objectCount = objectCount + 1;
             String objectId = new StringBuilder()
                     .append("OBJECT")
                     .append(String.format("%0" + desiredLength + "d", objectCount))
-                    .append("|")
-                    .append(TableauUtil.generateRandom(10))
+//                    .append("__")
+//                    .append(TableauUtil.generateRandom(10))
                     .toString();
             tdsTable.setObjectId(objectId);
-        }
-
-        this.tdsTables = result;
-        for (TdsTable tdsTable : tdsTables) {
-            log.info("TABLE [{}]", tdsTable.getName());
+            tdsTable.setOrder(objectCount);
         }
     }
 
+    private static void dfsTraverse(
+            String node,
+            Map<String, List<String>> graph,
+            List<String> sortedList
+    ) {
+        if (sortedList.contains(node)) {
+            log.info("NODE={} => X (VISITED)", node);
+            return;
+        }
+
+        sortedList.add(node);
+        List<String> children = graph.getOrDefault(node, new ArrayList<>());
+        log.info("NODE={} => GRAPH={}", node, children);
+
+        for (String childNode : children) {
+            dfsTraverse(childNode, graph, sortedList);
+        }
+    }
+
+    private void computeRelationships() {
+        // order relationship by column2
+        tdsRelationships.sort((rel1, rel2) -> {
+            TdsColumn rel1col2 = rel1.getCol2();
+            TdsColumn rel2col2 = rel2.getCol2();
+
+            TdsTable rel1tbl2 = getTdsTable(rel1col2.getTdsTableId());
+            TdsTable rel2tbl2 = getTdsTable(rel2col2.getTdsTableId());
+
+            return rel1tbl2.getOrder() - rel2tbl2.getOrder();
+        });
+
+        // re-order table follow relationship
+        List<String> sortedTdsTableObjectId = new ArrayList<>();
+        Map<String, List<String>> graph = new HashMap<>();
+
+        for (TdsTable tdsTable : tdsTables) {
+            String objectId = tdsTable.getObjectId();
+            graph.put(objectId, new ArrayList<>());
+        }
+
+        for (TdsRelationship tdsRelationship : tdsRelationships) {
+            TdsColumn col1 = tdsRelationship.getCol1();
+            TdsColumn col2 = tdsRelationship.getCol2();
+
+            TdsTable tbl1 = getTdsTable(col1.getTdsTableId());
+            TdsTable tbl2 = getTdsTable(col2.getTdsTableId());
+
+            String objectId1 = tbl1.getObjectId();
+            String objectId2 = tbl2.getObjectId();
+            graph.get(objectId1).add(objectId2);
+        }
+
+        Set<String> allChildren = graph.values().stream() // childNode
+                .flatMap(List::stream)
+                .collect(Collectors.toSet());
+        List<String> rootNodes = new ArrayList<>(new ArrayList<>(graph.keySet())
+                .stream()
+                .filter(node -> !allChildren.contains(node))
+                .toList()); // rootNode
+        rootNodes.sort(String::compareTo);
+
+
+        for (String root : rootNodes) {
+            dfsTraverse(root, graph, sortedTdsTableObjectId);
+            log.info("--------");
+        }
+
+        List<TdsTable> sortedTdsTables = new ArrayList<>();
+        for (String objectId : sortedTdsTableObjectId) {
+            TdsTable tdsTable = getTdsTableByObjectId(objectId);
+            sortedTdsTables.add(tdsTable);
+        }
+        this.tdsTables = sortedTdsTables;
+        log.info("SORTED TABLE: {}", sortedTdsTableObjectId);
+    }
+
     private void computeTdsColumns() {
-        Set<String> columnNameSet = new HashSet<>();
         // update name
+        Set<String> columnNameSet = new HashSet<>();
         for (TdsColumn tdsColumn : tdsColumns) {
             TdsTable tdsTable = getTdsTable(tdsColumn.getTdsTableId());
             String name = tdsColumn.getName();
@@ -128,11 +196,6 @@ public class TdsMetadata {
                 tdsColumn.setName(name);
             }
             columnNameSet.add(name);
-        }
-
-        for (TdsColumn tdsColumn : tdsColumns) {
-            TdsTable tdsTable = getTdsTable(tdsColumn.getTdsTableId());
-            log.info("COLUMN [{}] TABLE [{}]", tdsColumn.getName(), tdsTable.getName());
         }
     }
 
@@ -176,6 +239,7 @@ public class TdsMetadata {
         }
     }
 
+    @Data
     @Getter
     @EqualsAndHashCode
     public static class TdsConnection {
@@ -205,9 +269,11 @@ public class TdsMetadata {
     }
 
     @Data
-    @EqualsAndHashCode
+    @EqualsAndHashCode(onlyExplicitlyIncluded = true)
     public static class TdsTable {
+        @EqualsAndHashCode.Include
         private final String id;
+
         private String originalTable; // public.test
         private String table; // [public].[test]
         private String originalName; // test
@@ -215,7 +281,8 @@ public class TdsMetadata {
 
         // compute value
         private String objectId; // object-id of table
-        private String name; // test
+        private String name; // compute name (if table is duplicate)
+        private int order; // order of table in tdsTables
 
         public TdsTable(String table) {
             this.id = UUID.randomUUID().toString();
@@ -227,18 +294,20 @@ public class TdsMetadata {
             this.name = this.originalName;
 //            this.objectId = TableauUtil.generateRandom(32).toUpperCase();
         }
+
+
     }
 
     @Data
     @EqualsAndHashCode
     public static class TdsColumn {
         private final String id;
-        private String originalName;
-        private String name;
-        private String type;
+        private String originalName; // use to save original name
+        private String name; // compute name (if duplicate column between multiple table)
+        private String type; // not use now
 
-        private String tdsConnectionId;
-        private String tdsTableId;
+        private String tdsConnectionId; // link to connection
+        private String tdsTableId; // link to table
 
         public TdsColumn(String name) {
             this.originalName = name;
@@ -269,13 +338,15 @@ public class TdsMetadata {
         }
     }
 
-    @Getter
+    @Data
     @EqualsAndHashCode
     public static class TdsRelationship {
         private final String id;
-        private TdsColumn col1;
-        private TdsColumn col2;
-        private String operator;
+        private TdsColumn col1; // use to build Tds
+        private TdsColumn col2;  // use to build Tds
+        private String operator; // use to build Tds
+
+        private boolean visited = false; // use to sort TdsRelationship
 
         public TdsRelationship(TdsColumn col1, TdsColumn col2, String operator) {
             this.id = UUID.randomUUID().toString();

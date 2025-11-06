@@ -15,6 +15,11 @@ tabcmd publish 011_1con_4tbl.tds --project='[ict_1] ts_tds_builder' --overwrite
 tabcmd publish 011_1con_4tbl_join.tds --project='[ict_1] ts_tds_builder' --overwrite
 tabcmd publish 011_multiple_test_table_5tbl.tds --project='[ict_1] ts_tds_builder' --overwrite
 tabcmd publish 011_multiple_test_table_6tbl.tds --project='[ict_1] ts_tds_builder' --overwrite
-
 tabcmd publish 011_1con_1tbl.tds --project='[ict_1] ts_tds_builder' --overwrite
+
+tabcmd publish ./template/tds_template/@011_ncon_ntbl.tds --project='[ict_1] ts_tds_builder' --overwrite
+tabcmd publish ./template/tds_template/012_ncon_ntbl_nrel.tds --project='[ict_1] ts_tds_builder' --overwrite
+tabcmd publish ./output/tds/@011_ncon_ntbl.tds --project='[ict_1] ts_tds_builder' --overwrite
+
+tabcmd publish ./output/hyper/order.hyper --project='[ict_1] ts_tds_builder' --overwrite
 ```
