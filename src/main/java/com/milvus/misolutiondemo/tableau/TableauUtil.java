@@ -1,10 +1,24 @@
 package com.milvus.misolutiondemo.tableau;
 
+import org.apache.commons.compress.archivers.tar.TarArchiveEntry;
+import org.apache.commons.compress.archivers.tar.TarArchiveOutputStream;
+import org.apache.commons.compress.compressors.gzip.GzipCompressorOutputStream;
+
+import java.io.BufferedOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.UncheckedIOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.security.SecureRandom;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.IntStream;
+import java.util.stream.Stream;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipOutputStream;
 
 public class TableauUtil {
     private static final String CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -39,7 +53,7 @@ public class TableauUtil {
         return num.isEmpty() ? -1 : Integer.parseInt(num);
     }
 
-    public static void main(String[] args)  {
+    public static void main(String[] args) {
         demoNameComparator();
     }
 
@@ -50,5 +64,65 @@ public class TableauUtil {
         list1.sort(createNameComparator());
         System.out.println(list);
         System.out.println(list1);
+    }
+
+//    public static void zipFolder(String sourceDirPath, String zipFilePath) throws IOException {
+//        Path sourceDir = Paths.get(sourceDirPath);
+//        Path zipFile = Paths.get(zipFilePath);
+//
+//        if (!Files.exists(sourceDir) || !Files.isDirectory(sourceDir)) {
+//            throw new IOException("target folder is not existed or not an directory " + sourceDirPath);
+//        }
+//
+//        try (OutputStream fos = Files.newOutputStream(zipFile);
+//             ZipOutputStream zipOut = new ZipOutputStream(fos)) {
+//
+//            try (Stream<Path> stream = Files.walk(sourceDir)) {
+//                stream.filter(path -> !Files.isDirectory(path)) // Chỉ xử lý các file
+//                        .forEach(file -> {
+//                            try {
+//                                // Gọi hàm phụ trợ để nén từng file
+//                                zipFile(sourceDir, file, zipOut);
+//                            } catch (IOException e) {
+//                                // Xử lý lỗi nếu có vấn đề với một file cụ thể
+//                                System.err.println("Lỗi khi nén file " + file + ": " + e.getMessage());
+//                            }
+//                        });
+//            }
+//        }
+//        System.out.println("Zip success: " + sourceDirPath + " -> " + zipFilePath);
+//    }
+//
+//    private static void zipFile(Path sourceDir, Path fileToZip, ZipOutputStream zipOut) throws IOException {
+//        String zipEntryName = sourceDir.relativize(fileToZip).toString();
+//        ZipEntry zipEntry = new ZipEntry(zipEntryName);
+//        zipOut.putNextEntry(zipEntry);
+//        Files.copy(fileToZip, zipOut);
+//        zipOut.closeEntry();
+//    }
+
+    public static void zipFolder(String sourceDirPath, String outputFilePath) throws IOException {
+        Path sourceDir = Paths.get(sourceDirPath);
+        try (
+                OutputStream fOut = Files.newOutputStream(Paths.get(outputFilePath));
+                BufferedOutputStream buffOut = new BufferedOutputStream(fOut);
+                GzipCompressorOutputStream gzOut = new GzipCompressorOutputStream(buffOut);
+                TarArchiveOutputStream tOut = new TarArchiveOutputStream(gzOut)
+        ) {
+            Files.walk(sourceDir)
+                    .filter(path -> !Files.isDirectory(path))
+                    .forEach(path -> {
+                        TarArchiveEntry entry = new TarArchiveEntry(sourceDir.relativize(path).toString());
+                        try {
+                            entry.setSize(Files.size(path));
+                            tOut.putArchiveEntry(entry);
+                            Files.copy(path, tOut);
+                            tOut.closeArchiveEntry();
+                        } catch (IOException e) {
+                            throw new UncheckedIOException(e);
+                        }
+                    });
+            tOut.finish();
+        }
     }
 }

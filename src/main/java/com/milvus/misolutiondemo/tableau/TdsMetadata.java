@@ -6,7 +6,6 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 
-import javax.swing.*;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -33,23 +32,26 @@ public class TdsMetadata {
     private Map<String, Integer> tableNameMap = new HashMap<>();
     private Set<String> columnNameSet = new HashSet<>();
 
-    public void addTdsConnection(TdsConnection tdsConnection) {
+    public TdsConnection addTdsConnection(TdsConnection tdsConnection) {
         this.tdsConnections.add(tdsConnection);
         this.tdsConnectionMap.put(tdsConnection.getId(), tdsConnection);
+        return tdsConnection;
     }
 
-    public void addTdsTable(TdsConnection tdsConnection, TdsTable tdsTable) {
+    public TdsTable addTdsTable(TdsConnection tdsConnection, TdsTable tdsTable) {
         tdsTable.setTdsConnectionId(tdsConnection.getId());
         this.tdsTables.add(tdsTable);
         this.tdsTableMap.put(tdsTable.getId(), tdsTable);
+        return tdsTable;
     }
 
-    public void addTdsColumn(TdsTable tdsTable, TdsColumn tdsColumn) {
+    public TdsColumn addTdsColumn(TdsTable tdsTable, TdsColumn tdsColumn) {
         tdsColumn.setTdsConnectionId(tdsTable.getTdsConnectionId());
         tdsColumn.setTdsTableId(tdsTable.getId());
 
         this.tdsColumns.add(tdsColumn);
         this.tdsColumnMap.put(tdsColumn.getId(), tdsColumn);
+        return tdsColumn;
     }
 
     public void addRelationship(TdsRelationship tdsRelationship) {
@@ -83,9 +85,39 @@ public class TdsMetadata {
     }
 
     public void compute() {
+        this.computeTdsConnections();
         this.computeTdsTables();
         this.computeTdsColumns();
         this.computeRelationships();
+    }
+
+    private void computeTdsConnections() {
+        // 1. sort by name
+        tdsConnections.sort(Comparator.comparing(TdsConnection::getNamedConnectionCaption));
+
+        // 2. add (1), ... to namedConnectionCaption
+        Map<String, Integer> namedConnectionCaptionCount = new HashMap<>();
+        for (TdsConnection tdsConnection : tdsConnections) {
+            String originalName = tdsConnection.getNamedConnectionCaption();
+            int count = namedConnectionCaptionCount.getOrDefault(originalName, 0);
+            if (count > 0) {
+                String newName = originalName + count;
+                tdsConnection.setNamedConnectionCaption(newName);
+            }
+            namedConnectionCaptionCount.put(originalName, count + 1);
+        }
+
+        // 3. add namedConnectionName
+        int desiredLength = 10;
+        int connectionCount = 0;
+        for (TdsConnection tdsConnection : tdsConnections) {
+            connectionCount = connectionCount + 1;
+            String name = new StringBuilder()
+                    .append("CONNECTION_")
+                    .append(String.format("%0" + desiredLength + "d", connectionCount))
+                    .toString();
+            tdsConnection.setNamedConnectionName(name);
+        }
     }
 
     private void computeTdsTables() {
@@ -105,7 +137,7 @@ public class TdsMetadata {
             int desiredLength = 10;
             objectCount = objectCount + 1;
             String objectId = new StringBuilder()
-                    .append("OBJECT")
+                    .append("OBJECT_")
                     .append(String.format("%0" + desiredLength + "d", objectCount))
 //                    .append("__")
 //                    .append(TableauUtil.generateRandom(10))
@@ -224,53 +256,87 @@ public class TdsMetadata {
         }
     }
 
-    public enum ConnectionType {
-        POSTGRES("postgres");
-
-        private final String name;
-
-        ConnectionType(String name) {
-            this.name = name;
-        }
-
-        public String getName() {
-            return this.name;
-        }
-
-        public static ConnectionType from(String type) {
-            if (type.equals("postgres")) {
-                return POSTGRES;
-            }
-            return null;
-        }
-    }
+//    public enum ConnectionType {
+//        POSTGRES("postgres"),
+//        HYPER("hyper");
+//
+//        private final String name;
+//
+//        ConnectionType(String name) {
+//            this.name = name;
+//        }
+//
+//        public String getName() {
+//            return this.name;
+//        }
+//
+//        public static ConnectionType from(String type) {
+//            if (type.equals("postgres")) {
+//                return POSTGRES;
+//            }
+//            return null;
+//        }
+//    }
 
     @Data
     @Getter
     @EqualsAndHashCode
     public static class TdsConnection {
         private final String id;
-        private ConnectionType connectionType;
-        private String host;
-        private String port;
-        private String database;
-        private String username;
-        private String password;
+        private String type; // connection | data
+
+        private String connectionClass;
+        // type=data & connectionClass=textscan;
+        private String connectionDirectory;
+        private String connectionFilename;
+        // type=connection & connectionClass=postgres
+        private String connectionAuthentication;
+        private String connectionDbName;
+        private String connectionOneTimeSql;
+        private String connectionPort;
+        private String connectionServer;
+        private String connectionUsername;
+        private String connectionWorkgroupAuthMode;
 
         // computed attribute
-        private String namedConnection; // connectionType.random(26)
+        private String namedConnectionName; // connectionType.random(26)
+        private String namedConnectionCaption;
 
-        public TdsConnection(String connectionType, String host, String port, String database, String username, String password) {
+        private TdsConnection() {
             this.id = UUID.randomUUID().toString();
+        }
 
-            this.connectionType = ConnectionType.from(connectionType);
-            this.host = host;
-            this.port = port;
-            this.username = username;
-            this.password = password;
-            this.database = database;
+        public static TdsConnection createConnection(String connectionClass,
+                                                     String connectionAuthentication,
+                                                     String connectionDbName,
+                                                     String connectionOneTimeSql,
+                                                     String connectionPort,
+                                                     String connectionServer,
+                                                     String connectionUsername,
+                                                     String connectionWorkgroupAuthMode) {
+            TdsConnection tdsConnection = new TdsConnection();
+            tdsConnection.setType("connection");
+            tdsConnection.setConnectionClass(connectionClass);
+            tdsConnection.setConnectionAuthentication(connectionAuthentication);
+            tdsConnection.setConnectionDbName(connectionDbName);
+            tdsConnection.setConnectionOneTimeSql(connectionOneTimeSql);
+            tdsConnection.setConnectionPort(connectionPort);
+            tdsConnection.setConnectionServer(connectionServer);
+            tdsConnection.setConnectionUsername(connectionUsername);
+            tdsConnection.setConnectionWorkgroupAuthMode(connectionWorkgroupAuthMode);
 
-            this.namedConnection = connectionType + "." + TableauUtil.generateRandom(28);
+            tdsConnection.setNamedConnectionCaption(connectionServer);
+            return tdsConnection;
+        }
+
+        public static TdsConnection createCsvConnection(String connectionDirectory, String connectionFilename) {
+            TdsConnection tdsConnection = new TdsConnection();
+            tdsConnection.setType("data");
+            tdsConnection.setConnectionDirectory(connectionDirectory);
+            tdsConnection.setConnectionFilename(connectionFilename);
+
+            tdsConnection.setNamedConnectionCaption(connectionFilename);
+            return tdsConnection;
         }
     }
 
@@ -280,6 +346,7 @@ public class TdsMetadata {
         @EqualsAndHashCode.Include
         private final String id;
 
+        private String type; // data | connection
         private String originalTable; // public.test
         private String table; // [public].[test]
         private String originalName; // test
@@ -290,18 +357,48 @@ public class TdsMetadata {
         private String name; // compute name (if table is duplicate)
         private int order; // order of table in tdsTables
 
+        private TdsTable() {
+            this.id = UUID.randomUUID().toString();
+        }
+
         public TdsTable(String table) {
             this.id = UUID.randomUUID().toString();
-
             this.originalTable = table;
             String[] tableParts = table.split("\\.");
             this.table = Arrays.stream(tableParts).map(t -> "[" + t + "]").collect(Collectors.joining("."));
             this.originalName = tableParts[tableParts.length - 1];
             this.name = this.originalName;
+            this.type = "connection";
 //            this.objectId = TableauUtil.generateRandom(32).toUpperCase();
         }
 
+        /**
+         * @param table: this is table path
+         *               Ex. public.tableName
+         * @return TdsTable
+         */
+        public static TdsTable createConnectionTable(String table) {
+            TdsTable tdsTable = new TdsTable();
+            tdsTable.originalTable = table;
+            String[] tableParts = table.split("\\.");
+            tdsTable.table = Arrays.stream(tableParts).map(t -> "[" + t + "]").collect(Collectors.joining("."));
+            tdsTable.originalName = tableParts[tableParts.length - 1];
+            tdsTable.name = tdsTable.originalName;
+            tdsTable.type = "connection";
+            return tdsTable;
+        }
 
+        /**
+         * @param name: this is table name
+         * @return tdsTale
+         */
+        public TdsTable createCsvTable(String name, String fileName) {
+            TdsTable tdsTable = new TdsTable();
+            tdsTable.name = name;
+            tdsTable.table = String.format("[%s#csv]", fileName);
+            tdsTable.type = "data";
+            return tdsTable;
+        }
     }
 
     @Data

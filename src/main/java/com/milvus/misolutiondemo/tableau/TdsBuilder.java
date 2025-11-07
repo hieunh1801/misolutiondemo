@@ -35,11 +35,12 @@ public class TdsBuilder {
         this.datasource = document
                 .addElement("datasource")
                 .addAttribute("formattedName", formattedName)
-                .addAttribute("inline", "true")
-                .addAttribute("source-platform", "linux")
+//                .addAttribute("inline", "true")
+//                .addAttribute("source-platform", "linux")
                 .addAttribute("version", version)
-                .addAttribute("xml:base", tdsMetadata.getTableauInfo().getHost())
-                .addAttribute("xmlns:user", "http://www.tableausoftware.com/xml/user");
+//                .addAttribute("xml:base", tdsMetadata.getTableauInfo().getHost())
+//                .addAttribute("xmlns:user", "http://www.tableausoftware.com/xml/user")
+        ;
         return this;
     }
 
@@ -75,19 +76,26 @@ public class TdsBuilder {
         for (TdsMetadata.TdsConnection connection : connections) {
             Element namedConnectionEl = namedConnectionsEl
                     .addElement("named-connection")
-                    .addAttribute("caption", connection.getHost())
-                    .addAttribute("name", connection.getNamedConnection());
+                    .addAttribute("caption", connection.getNamedConnectionCaption())
+                    .addAttribute("name", connection.getNamedConnectionName());
 
-            namedConnectionEl
-                    .addElement("connection")
-                    .addAttribute("authentication", "username-password")
-                    .addAttribute("class", connection.getConnectionType().getName())
-                    .addAttribute("dbname", connection.getDatabase())
-                    .addAttribute("one-time-sql", "")
-                    .addAttribute("port", connection.getPort())
-                    .addAttribute("server", connection.getHost())
-                    .addAttribute("username", connection.getUsername())
-                    .addAttribute("workgroup-auth-mode", "");
+            if ("data".equals(connection.getType())) {
+                namedConnectionEl.addElement("connection")
+                        .addAttribute("class", connection.getConnectionClass())
+                        .addAttribute("directory", connection.getConnectionDirectory())
+                        .addAttribute("filename", connection.getConnectionFilename());
+            } else {
+                namedConnectionEl
+                        .addElement("connection")
+                        .addAttribute("class", connection.getConnectionClass())
+                        .addAttribute("authentication", connection.getConnectionAuthentication())
+                        .addAttribute("dbname", connection.getConnectionDbName())
+                        .addAttribute("one-time-sql", connection.getConnectionOneTimeSql())
+                        .addAttribute("port", connection.getConnectionPort())
+                        .addAttribute("server", connection.getConnectionServer())
+                        .addAttribute("username", connection.getConnectionUsername())
+                        .addAttribute("workgroup-auth-mode", connection.getConnectionWorkgroupAuthMode());
+            }
         }
 
         // add relation
@@ -97,17 +105,9 @@ public class TdsBuilder {
         List<TdsMetadata.TdsTable> tdsTables = tdsMetadata.getTdsTables();
         for (TdsMetadata.TdsTable tdsTable : tdsTables) {
             TdsMetadata.TdsConnection tdsConnection = tdsMetadata.getTdsConnection(tdsTable.getTdsConnectionId());
-//                if (table.isRoot) {
-//                    objectModelEncapsulateLegacyFalseEl
-//                            .addAttribute("connection", connection.namedConnection)
-//                            .addAttribute("name", table.name)
-//                            .addAttribute("table", table.table)
-//                            .addAttribute("type", "table");
-//                }
-
             objectModelEncapsulateLegacyTrueEl
                     .addElement("_.fcp.ObjectModelSharedDimensions.true...relation")
-                    .addAttribute("connection", tdsConnection.getNamedConnection())
+                    .addAttribute("connection", tdsConnection.getNamedConnectionName())
                     .addAttribute("name", tdsTable.getName())
                     .addAttribute("table", tdsTable.getTable())
                     .addAttribute("type", "table");
@@ -197,7 +197,7 @@ public class TdsBuilder {
             properties.addAttribute("context", "");
 
             Element relation = properties.addElement("relation");
-            relation.addAttribute("connection", tdsConnection.getNamedConnection())
+            relation.addAttribute("connection", tdsConnection.getNamedConnectionName())
                     .addAttribute("name", table.getName())
                     .addAttribute("table", table.getTable())
                     .addAttribute("type", "table");
@@ -270,11 +270,11 @@ public class TdsBuilder {
 //        }
     }
 
-    public void writeToFile(String fileName) throws Exception {
+    public void writeToFile(String outputFolder, String fileName) throws Exception {
         OutputFormat format = OutputFormat.createPrettyPrint();
         format.setEncoding("UTF-8");
-
-        try (OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(fileName), StandardCharsets.UTF_8)) {
+        String outputFile = outputFolder + "/" + fileName + ".tds";
+        try (OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(outputFile), StandardCharsets.UTF_8)) {
             XMLWriter xmlWriter = new XMLWriter(writer, format);
             xmlWriter.write(document);
             xmlWriter.close();
@@ -299,22 +299,24 @@ public class TdsBuilder {
                 ""
         );
         tdsMetadata.setTableauInfo(tableauInfo);
-        TdsMetadata.TdsConnection conn1 = new TdsMetadata.TdsConnection(
+        TdsMetadata.TdsConnection conn1 = TdsMetadata.TdsConnection.createConnection(
                 "postgres",
-                "3.35.93.207",
-                "5432",
+                "username-password",
                 "misolution_dev",
-                "postgres",
-                "Mlv_IT#25A"
+                "",
+                "5432",
+                "3.35.93.207",
+                "misolution_dev",
+                ""
         );
         tdsMetadata.addTdsConnection(conn1);
 
-        TdsMetadata.TdsTable tb1 = new TdsMetadata.TdsTable("public.test");
-        TdsMetadata.TdsTable tb2 = new TdsMetadata.TdsTable("public.test");
-        TdsMetadata.TdsTable tb3 = new TdsMetadata.TdsTable("public.test");
-        TdsMetadata.TdsTable tb4 = new TdsMetadata.TdsTable("ict.migration_account");
-        TdsMetadata.TdsTable tb5 = new TdsMetadata.TdsTable("ict.migration_account");
-        TdsMetadata.TdsTable tb6 = new TdsMetadata.TdsTable("ict.migration_account");
+        TdsMetadata.TdsTable tb1 = TdsMetadata.TdsTable.createConnectionTable("public.test");
+        TdsMetadata.TdsTable tb2 = TdsMetadata.TdsTable.createConnectionTable("public.test");
+        TdsMetadata.TdsTable tb3 = TdsMetadata.TdsTable.createConnectionTable("public.test");
+        TdsMetadata.TdsTable tb4 = TdsMetadata.TdsTable.createConnectionTable("ict.migration_account");
+        TdsMetadata.TdsTable tb5 = TdsMetadata.TdsTable.createConnectionTable("ict.migration_account");
+        TdsMetadata.TdsTable tb6 = TdsMetadata.TdsTable.createConnectionTable("ict.migration_account");
         tdsMetadata.addTdsTable(conn1, tb1);
         tdsMetadata.addTdsTable(conn1, tb2);
         tdsMetadata.addTdsTable(conn1, tb3);
@@ -325,8 +327,8 @@ public class TdsBuilder {
         TdsBuilder tdsBuilder = new TdsBuilder(tdsMetadata);
         tdsBuilder
                 .build()
-                .writeToFile("./output/tds/011_1con_ntbl.tds");
-        // tabcmd publish ./output/tds/011_1con_ntbl.tds --project='[ict_1] ts_tds_builder' --overwrite
+                .writeToFile("./output/tds", "011_1con_ntbl");
+        // tabcmd publish ./output/tds/011_1con_ntbl.tds --project='ts_tds_builder' --overwrite
     }
 
     private static void demo011_1con_ntable_nrelationship() throws Exception {
@@ -338,22 +340,24 @@ public class TdsBuilder {
                 ""
         );
         tdsMetadata.setTableauInfo(tableauInfo);
-        TdsMetadata.TdsConnection conn1 = new TdsMetadata.TdsConnection(
+        TdsMetadata.TdsConnection conn1 = TdsMetadata.TdsConnection.createConnection(
                 "postgres",
-                "3.35.93.207",
-                "5432",
+                "username-password",
                 "misolution_dev",
-                "postgres",
-                "Mlv_IT#25A"
+                "",
+                "5432",
+                "3.35.93.207",
+                "misolution_dev",
+                ""
         );
         tdsMetadata.addTdsConnection(conn1);
 
-        TdsMetadata.TdsTable tb1 = new TdsMetadata.TdsTable("public.test");
-        TdsMetadata.TdsTable tb2 = new TdsMetadata.TdsTable("public.test");
-        TdsMetadata.TdsTable tb3 = new TdsMetadata.TdsTable("public.test");
-        TdsMetadata.TdsTable tb4 = new TdsMetadata.TdsTable("ict.migration_account");
-        TdsMetadata.TdsTable tb5 = new TdsMetadata.TdsTable("ict.migration_account");
-        TdsMetadata.TdsTable tb6 = new TdsMetadata.TdsTable("ict.migration_account");
+        TdsMetadata.TdsTable tb1 = TdsMetadata.TdsTable.createConnectionTable("public.test");
+        TdsMetadata.TdsTable tb2 = TdsMetadata.TdsTable.createConnectionTable("public.test");
+        TdsMetadata.TdsTable tb3 = TdsMetadata.TdsTable.createConnectionTable("public.test");
+        TdsMetadata.TdsTable tb4 = TdsMetadata.TdsTable.createConnectionTable("ict.migration_account");
+        TdsMetadata.TdsTable tb5 = TdsMetadata.TdsTable.createConnectionTable("ict.migration_account");
+        TdsMetadata.TdsTable tb6 = TdsMetadata.TdsTable.createConnectionTable("ict.migration_account");
         tdsMetadata.addTdsTable(conn1, tb1);
         tdsMetadata.addTdsTable(conn1, tb2);
         tdsMetadata.addTdsTable(conn1, tb3);
@@ -388,8 +392,8 @@ public class TdsBuilder {
         TdsBuilder tdsBuilder = new TdsBuilder(tdsMetadata);
         tdsBuilder
                 .build()
-                .writeToFile("./output/tds/011_1con_ntbl_relationship.tds");
-        // tabcmd publish ./output/tds/011_1con_ntbl_relationship.tds --project='[ict_1] ts_tds_builder' --overwrite
+                .writeToFile("./output/tds", "011_1con_ntbl_relationship");
+        // tabcmd publish ./output/tds/011_1con_ntbl_relationship.tds --project='ts_tds_builder' --overwrite
     }
 
     private static void demo012_ncon_ntable() throws Exception {
@@ -401,43 +405,49 @@ public class TdsBuilder {
                 ""
         );
         tdsMetadata.setTableauInfo(tableauInfo);
-        TdsMetadata.TdsConnection conn1 = new TdsMetadata.TdsConnection(
+        TdsMetadata.TdsConnection conn1 = TdsMetadata.TdsConnection.createConnection(
                 "postgres",
-                "3.35.93.207",
-                "5432",
+                "username-password",
                 "misolution_dev",
-                "postgres",
-                "Mlv_IT#25A"
+                "",
+                "5432",
+                "3.35.93.207",
+                "misolution_dev",
+                ""
         );
-        TdsMetadata.TdsConnection conn2 = new TdsMetadata.TdsConnection(
+        TdsMetadata.TdsConnection conn2 = TdsMetadata.TdsConnection.createConnection(
                 "postgres",
-                "3.35.93.207",
-                "5432",
+                "username-password",
                 "misolution_dev",
-                "postgres",
-                "Mlv_IT#25A"
+                "",
+                "5432",
+                "3.35.93.207",
+                "misolution_dev",
+                ""
         );
-        TdsMetadata.TdsConnection conn3 = new TdsMetadata.TdsConnection(
+        TdsMetadata.TdsConnection conn3 = TdsMetadata.TdsConnection.createConnection(
                 "postgres",
-                "3.35.93.207",
-                "5432",
+                "username-password",
                 "misolution_dev",
-                "postgres",
-                "Mlv_IT#25A"
+                "",
+                "5432",
+                "3.35.93.207",
+                "misolution_dev",
+                ""
         );
         tdsMetadata.addTdsConnection(conn1);
         tdsMetadata.addTdsConnection(conn2);
         tdsMetadata.addTdsConnection(conn3);
 
-        TdsMetadata.TdsTable conn1tbl1 = new TdsMetadata.TdsTable("public.test");
-        TdsMetadata.TdsTable conn1tbl2 = new TdsMetadata.TdsTable("public.test");
-        TdsMetadata.TdsTable conn1tbl3 = new TdsMetadata.TdsTable("ict.migration_account");
-        TdsMetadata.TdsTable conn2tbl1 = new TdsMetadata.TdsTable("public.test");
-        TdsMetadata.TdsTable conn2tbl2 = new TdsMetadata.TdsTable("ict.migration_account");
-        TdsMetadata.TdsTable conn2tbl3 = new TdsMetadata.TdsTable("ict.migration_account");
-        TdsMetadata.TdsTable conn3tbl1 = new TdsMetadata.TdsTable("ict.migration_current");
-        TdsMetadata.TdsTable conn3tbl2 = new TdsMetadata.TdsTable("ict.migration_history");
-        TdsMetadata.TdsTable conn3tbl3 = new TdsMetadata.TdsTable("ict.migration_cost");
+        TdsMetadata.TdsTable conn1tbl1 = TdsMetadata.TdsTable.createConnectionTable("public.test");
+        TdsMetadata.TdsTable conn1tbl2 = TdsMetadata.TdsTable.createConnectionTable("public.test");
+        TdsMetadata.TdsTable conn1tbl3 = TdsMetadata.TdsTable.createConnectionTable("ict.migration_account");
+        TdsMetadata.TdsTable conn2tbl1 = TdsMetadata.TdsTable.createConnectionTable("public.test");
+        TdsMetadata.TdsTable conn2tbl2 = TdsMetadata.TdsTable.createConnectionTable("ict.migration_account");
+        TdsMetadata.TdsTable conn2tbl3 = TdsMetadata.TdsTable.createConnectionTable("ict.migration_account");
+        TdsMetadata.TdsTable conn3tbl1 = TdsMetadata.TdsTable.createConnectionTable("ict.migration_current");
+        TdsMetadata.TdsTable conn3tbl2 = TdsMetadata.TdsTable.createConnectionTable("ict.migration_history");
+        TdsMetadata.TdsTable conn3tbl3 = TdsMetadata.TdsTable.createConnectionTable("ict.migration_cost");
         tdsMetadata.addTdsTable(conn1, conn1tbl1);
         tdsMetadata.addTdsTable(conn1, conn1tbl2);
         tdsMetadata.addTdsTable(conn1, conn1tbl3);
@@ -485,8 +495,8 @@ public class TdsBuilder {
         TdsBuilder tdsBuilder = new TdsBuilder(tdsMetadata);
         tdsBuilder
                 .build()
-                .writeToFile("./output/tds/011_ncon_ntbl.tds");
-        // tabcmd publish ./output/tds/011_ncon_ntbl.tds --project='[ict_1] ts_tds_builder' --overwrite
+                .writeToFile("./output/tds", "011_ncon_ntbl");
+        // tabcmd publish ./output/tds/011_ncon_ntbl.tds --project='ts_tds_builder' --overwrite
     }
 
     private static void demo012_ncon_ntable_nrel() throws Exception {
@@ -498,43 +508,49 @@ public class TdsBuilder {
                 ""
         );
         tdsMetadata.setTableauInfo(tableauInfo);
-        TdsMetadata.TdsConnection conn1 = new TdsMetadata.TdsConnection(
+        TdsMetadata.TdsConnection conn1 = TdsMetadata.TdsConnection.createConnection(
                 "postgres",
-                "3.35.93.207",
-                "5432",
+                "username-password",
                 "misolution_dev",
-                "postgres",
-                "Mlv_IT#25A"
+                "",
+                "5432",
+                "3.35.93.207",
+                "misolution_dev",
+                ""
         );
-        TdsMetadata.TdsConnection conn2 = new TdsMetadata.TdsConnection(
+        TdsMetadata.TdsConnection conn2 = TdsMetadata.TdsConnection.createConnection(
                 "postgres",
-                "3.35.93.207",
-                "5432",
+                "username-password",
                 "misolution_dev",
-                "postgres",
-                "Mlv_IT#25A"
+                "",
+                "5432",
+                "3.35.93.207",
+                "misolution_dev",
+                ""
         );
-        TdsMetadata.TdsConnection conn3 = new TdsMetadata.TdsConnection(
+        TdsMetadata.TdsConnection conn3 = TdsMetadata.TdsConnection.createConnection(
                 "postgres",
-                "3.35.93.207",
-                "5432",
+                "username-password",
                 "misolution_dev",
-                "postgres",
-                "Mlv_IT#25A"
+                "",
+                "5432",
+                "3.35.93.207",
+                "misolution_dev",
+                ""
         );
         tdsMetadata.addTdsConnection(conn1);
         tdsMetadata.addTdsConnection(conn2);
         tdsMetadata.addTdsConnection(conn3);
 
-        TdsMetadata.TdsTable conn1tbl1 = new TdsMetadata.TdsTable("public.test");
-        TdsMetadata.TdsTable conn1tbl2 = new TdsMetadata.TdsTable("public.test");
-        TdsMetadata.TdsTable conn1tbl3 = new TdsMetadata.TdsTable("ict.migration_account");
-        TdsMetadata.TdsTable conn2tbl1 = new TdsMetadata.TdsTable("public.test");
-        TdsMetadata.TdsTable conn2tbl2 = new TdsMetadata.TdsTable("ict.migration_account");
-        TdsMetadata.TdsTable conn2tbl3 = new TdsMetadata.TdsTable("ict.migration_account");
-        TdsMetadata.TdsTable conn3tbl1 = new TdsMetadata.TdsTable("ict.migration_current");
-        TdsMetadata.TdsTable conn3tbl2 = new TdsMetadata.TdsTable("ict.migration_history");
-        TdsMetadata.TdsTable conn3tbl3 = new TdsMetadata.TdsTable("ict.migration_cost");
+        TdsMetadata.TdsTable conn1tbl1 = TdsMetadata.TdsTable.createConnectionTable("public.test");
+        TdsMetadata.TdsTable conn1tbl2 = TdsMetadata.TdsTable.createConnectionTable("public.test");
+        TdsMetadata.TdsTable conn1tbl3 = TdsMetadata.TdsTable.createConnectionTable("ict.migration_account");
+        TdsMetadata.TdsTable conn2tbl1 = TdsMetadata.TdsTable.createConnectionTable("public.test");
+        TdsMetadata.TdsTable conn2tbl2 = TdsMetadata.TdsTable.createConnectionTable("ict.migration_account");
+        TdsMetadata.TdsTable conn2tbl3 = TdsMetadata.TdsTable.createConnectionTable("ict.migration_account");
+        TdsMetadata.TdsTable conn3tbl1 = TdsMetadata.TdsTable.createConnectionTable("ict.migration_current");
+        TdsMetadata.TdsTable conn3tbl2 = TdsMetadata.TdsTable.createConnectionTable("ict.migration_history");
+        TdsMetadata.TdsTable conn3tbl3 = TdsMetadata.TdsTable.createConnectionTable("ict.migration_cost");
         tdsMetadata.addTdsTable(conn1, conn1tbl1);
         tdsMetadata.addTdsTable(conn1, conn1tbl2);
         tdsMetadata.addTdsTable(conn1, conn1tbl3);
@@ -578,7 +594,7 @@ public class TdsBuilder {
         TdsBuilder tdsBuilder = new TdsBuilder(tdsMetadata);
         tdsBuilder
                 .build()
-                .writeToFile("./output/tds/012_ncon_ntbl_nrel.tds");
-        // tabcmd publish ./output/tds/012_ncon_ntbl_nrel.tds --project='[ict_1] ts_tds_builder' --overwrite
+                .writeToFile("./output/tds", "@012_ncon_ntbl_nrel.tds");
+        // tabcmd publish ./output/tds/@012_ncon_ntbl_nrel.tds --project='ts_tds_builder' --overwrite
     }
 }

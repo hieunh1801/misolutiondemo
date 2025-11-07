@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20242.24.1213.1118                               -->
+<datasource formatted-name='order' inline='true' version='18.1' xml:base='https://t.tableau-report.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+  </document-format-change-manifest>
+  <repository-location id='order_17623227282680' path='/t/ict_1/datasources' revision='1.0' site='ict_1' />
+  <connection class='federated'>
+    <named-connections>
+      <named-connection name='order'>
+        <connection authentication='auth-none' author-locale='en_US' class='hyper' dbname='Data/Extracts/order.hyper' default-settings='yes' schema='Extract' tablename='Extract' />
+      </named-connection>
+    </named-connections>
+    <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='order' name='order' table='[order].[order]' type='table' />
+  </connection>
+  <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+    <calculation class='tableau' formula='1' />
+  </column>
+  <_.fcp.ObjectModelTableType.true...column caption='order' datatype='table' name='[__tableau_internal_object_id__].[order_A797CAC1D4FE4CD5BBB7574244DC965A]' role='measure' type='quantitative' />
+  <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+  <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    <objects>
+      <object caption='order' id='order_A797CAC1D4FE4CD5BBB7574244DC965A'>
+        <properties context=''>
+          <relation connection='order' name='order' table='[order].[order]' type='table' />
+        </properties>
+      </object>
+    </objects>
+  </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+</datasource>

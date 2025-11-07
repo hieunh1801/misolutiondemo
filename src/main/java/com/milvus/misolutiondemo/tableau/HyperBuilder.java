@@ -40,13 +40,13 @@ public class HyperBuilder {
         return result;
     }
 
-    public void build(String tableName, String csvContent) throws Exception {
+    public void build(String fileName, String outputFolder, String tableName, String csvContent) throws Exception {
         List<Map<String, Object>> data = csvStringToList(csvContent);
         Set<String> allKeys = new LinkedHashSet<>();
         for (Map<String, Object> row : data) {
             allKeys.addAll(row.keySet());
         }
-        String outputFilePath = String.format("./output/hyper/%s.hyper", tableName);
+        String outputFilePath = String.format("%s/%s.hyper", outputFolder, fileName);
         TableDefinition tableDefinition = getTableDefinition(allKeys, tableName, tableName);
 
         try (HyperProcess process = getHyperProcess()) {
@@ -172,7 +172,7 @@ public class HyperBuilder {
                 O010,John,2025-11-05,150.60
                 """;
         HyperBuilder hyperBuilder = new HyperBuilder();
-        hyperBuilder.build(tableName, csvString);
+        hyperBuilder.build("order_hyper", "./output/hyper", tableName, csvString);
     }
 
     private static void demoOrderDetail() throws Exception {
@@ -191,6 +191,6 @@ public class HyperBuilder {
                 D010,O009,Pen Drive,4,22.00
                 """;
         HyperBuilder hyperBuilder = new HyperBuilder();
-        hyperBuilder.build(tableName, csvString);
+        hyperBuilder.build("order_detail", "./output/hyper",tableName, csvString);
     }
 }
