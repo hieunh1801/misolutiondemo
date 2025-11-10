@@ -33,6 +33,7 @@ dependencies {
     implementation 'com.opencsv:opencsv:5.9'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.dom4j:dom4j:2.1.4'
+    implementation 'org.apache.commons:commons-csv:1.10.0'
     implementation 'org.apache.commons:commons-compress:1.27.1'
 //    implementation 'com.github.javafaker:javafaker:1.0.2'
 //    implementation 'org.apache.commons:commons-exec:1.3'
