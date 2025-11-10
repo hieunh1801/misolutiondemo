@@ -19,6 +19,10 @@ import java.util.stream.IntStream;
 import java.util.stream.Stream;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
+import java.io.*;
+import java.nio.file.*;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipOutputStream;
 
 public class TableauUtil {
     private static final String CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -100,29 +104,53 @@ public class TableauUtil {
 //        Files.copy(fileToZip, zipOut);
 //        zipOut.closeEntry();
 //    }
+//
+//    public static void zipFolder(String sourceDirPath, String outputFilePath) throws IOException {
+//        Path sourceDir = Paths.get(sourceDirPath);
+//        try (
+//                OutputStream fOut = Files.newOutputStream(Paths.get(outputFilePath));
+//                BufferedOutputStream buffOut = new BufferedOutputStream(fOut);
+//                GzipCompressorOutputStream gzOut = new GzipCompressorOutputStream(buffOut);
+//                TarArchiveOutputStream tOut = new TarArchiveOutputStream(gzOut)
+//        ) {
+//            Files.walk(sourceDir)
+//                    .filter(path -> !Files.isDirectory(path))
+//                    .forEach(path -> {
+//                        TarArchiveEntry entry = new TarArchiveEntry(sourceDir.relativize(path).toString());
+//                        try {
+//                            entry.setSize(Files.size(path));
+//                            tOut.putArchiveEntry(entry);
+//                            Files.copy(path, tOut);
+//                            tOut.closeArchiveEntry();
+//                        } catch (IOException e) {
+//                            throw new UncheckedIOException(e);
+//                        }
+//                    });
+//            tOut.finish();
+//        }
+//    }
 
     public static void zipFolder(String sourceDirPath, String outputFilePath) throws IOException {
         Path sourceDir = Paths.get(sourceDirPath);
         try (
-                OutputStream fOut = Files.newOutputStream(Paths.get(outputFilePath));
-                BufferedOutputStream buffOut = new BufferedOutputStream(fOut);
-                GzipCompressorOutputStream gzOut = new GzipCompressorOutputStream(buffOut);
-                TarArchiveOutputStream tOut = new TarArchiveOutputStream(gzOut)
+                OutputStream fos = Files.newOutputStream(Paths.get(outputFilePath));
+                BufferedOutputStream bos = new BufferedOutputStream(fos);
+                ZipOutputStream zos = new ZipOutputStream(bos)
         ) {
             Files.walk(sourceDir)
                     .filter(path -> !Files.isDirectory(path))
                     .forEach(path -> {
-                        TarArchiveEntry entry = new TarArchiveEntry(sourceDir.relativize(path).toString());
+                        // Lấy relative path để không bao gồm folder cha
+                        Path relativePath = sourceDir.relativize(path);
+                        ZipEntry zipEntry = new ZipEntry(relativePath.toString().replace("\\", "/"));
                         try {
-                            entry.setSize(Files.size(path));
-                            tOut.putArchiveEntry(entry);
-                            Files.copy(path, tOut);
-                            tOut.closeArchiveEntry();
+                            zos.putNextEntry(zipEntry);
+                            Files.copy(path, zos);
+                            zos.closeEntry();
                         } catch (IOException e) {
                             throw new UncheckedIOException(e);
                         }
                     });
-            tOut.finish();
         }
     }
 }

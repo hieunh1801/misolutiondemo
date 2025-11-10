@@ -39,3 +39,5 @@ out/
 lib_windows/
 tabcmd.log
 **/tabcmd.log
+
+output/*

@@ -46,6 +46,25 @@ public class CsvBuilder {
         return records;
     }
 
+    /**
+     * @param headers: name, profile, ...
+     * @param count
+     * @return
+     */
+    public static List<Map<String, Object>> createMockData(String headers, int count) {
+        List<Map<String, Object>> records = new ArrayList<>();
+        List<String> headerList = Arrays.stream(headers.split(",")).map(String::trim).toList();
+        for (int i = 0; i < count; i++) {
+            Map<String, Object> record = new LinkedHashMap<>();
+            record.put("id", i);
+            for (String header : headerList) {
+                record.put(header, randomAsciiString(20));
+            }
+            records.add(record);
+        }
+        return records;
+    }
+
     public static void writeMapsToCsv(String filePath, List<Map<String, Object>> records, int batchSize) {
         if (records == null || records.isEmpty()) {
             return;

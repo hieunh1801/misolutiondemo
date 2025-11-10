@@ -12,6 +12,8 @@ import java.io.OutputStreamWriter;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
 
+import com.milvus.misolutiondemo.tableau.TdsMetadata.*;
+
 @Slf4j
 public class TdsBuilder {
     private final Document document;
@@ -68,12 +70,12 @@ public class TdsBuilder {
     }
 
     private TdsBuilder addConnection() {
-        List<TdsMetadata.TdsConnection> connections = tdsMetadata.getTdsConnections();
+        List<TdsConnection> connections = tdsMetadata.getTdsConnections();
         Element connectionEl = datasource.addElement("connection").addAttribute("class", "federated");
 
         // add namedConnection
         Element namedConnectionsEl = connectionEl.addElement("named-connections");
-        for (TdsMetadata.TdsConnection connection : connections) {
+        for (TdsConnection connection : connections) {
             Element namedConnectionEl = namedConnectionsEl
                     .addElement("named-connection")
                     .addAttribute("caption", connection.getNamedConnectionCaption())
@@ -102,9 +104,9 @@ public class TdsBuilder {
 //        Element objectModelEncapsulateLegacyFalseEl = connectionEl.addElement("_.fcp.ObjectModelEncapsulateLegacy.false...relation").addAttribute("type", "collection");
         Element objectModelEncapsulateLegacyTrueEl = connectionEl.addElement("_.fcp.ObjectModelEncapsulateLegacy.true...relation").addAttribute("type", "collection");
 
-        List<TdsMetadata.TdsTable> tdsTables = tdsMetadata.getTdsTables();
-        for (TdsMetadata.TdsTable tdsTable : tdsTables) {
-            TdsMetadata.TdsConnection tdsConnection = tdsMetadata.getTdsConnection(tdsTable.getTdsConnectionId());
+        List<TdsTable> tdsTables = tdsMetadata.getTdsTables();
+        for (TdsTable tdsTable : tdsTables) {
+            TdsConnection tdsConnection = tdsMetadata.getTdsConnection(tdsTable.getTdsConnectionId());
             objectModelEncapsulateLegacyTrueEl
                     .addElement("_.fcp.ObjectModelSharedDimensions.true...relation")
                     .addAttribute("connection", tdsConnection.getNamedConnectionName())
@@ -115,10 +117,10 @@ public class TdsBuilder {
 
         // add cols <map> // this is column mapper
         Element colEl = connectionEl.addElement("cols");
-        List<TdsMetadata.TdsColumn> tdsColumns = tdsMetadata.getTdsColumns();
-        for (TdsMetadata.TdsColumn tdsColumn : tdsColumns) {
-            TdsMetadata.TdsConnection tdsConnection = tdsMetadata.getTdsConnection(tdsColumn.getTdsConnectionId());
-            TdsMetadata.TdsTable tdsTable = tdsMetadata.getTdsTable(tdsColumn.getTdsTableId());
+        List<TdsColumn> tdsColumns = tdsMetadata.getTdsColumns();
+        for (TdsColumn tdsColumn : tdsColumns) {
+            TdsConnection tdsConnection = tdsMetadata.getTdsConnection(tdsColumn.getTdsConnectionId());
+            TdsTable tdsTable = tdsMetadata.getTdsTable(tdsColumn.getTdsTableId());
 
             String key = String.format("[%s]", tdsColumn.getName());
             String value = String.format("[%s].[%s]", tdsTable.getName(), tdsColumn.getOriginalName());
@@ -129,9 +131,9 @@ public class TdsBuilder {
 
         // add metadata-records // this is column information
 //        Element metadataRecordsEl = connectionEl.addElement("metadata-records");
-//        for (TdsMetadata.TdsColumn tdsColumn : tdsColumns) {
-//            TdsMetadata.TdsConnection tdsConnection = tdsMetadata.getTdsConnection(tdsColumn.getTdsConnectionId());
-//            TdsMetadata.TdsTable tdsTable = tdsMetadata.getTdsTable(tdsColumn.getTdsTableId());
+//        for (TdsColumn tdsColumn : tdsColumns) {
+//            TdsConnection tdsConnection = tdsMetadata.getTdsConnection(tdsColumn.getTdsConnectionId());
+//            TdsTable tdsTable = tdsMetadata.getTdsTable(tdsColumn.getTdsTableId());
 //
 //            Element metadataRecordEl = metadataRecordsEl.addElement("_.fcp.ObjectModelSharedDimensions.true...metadata-record")
 //                    .addAttribute("class", "column");
@@ -153,8 +155,8 @@ public class TdsBuilder {
 
     private TdsBuilder addColumn() {
         // add _.fcp.ObjectModelTableType.true...column
-        List<TdsMetadata.TdsTable> tdsTables = tdsMetadata.getTdsTables();
-        for (TdsMetadata.TdsTable table : tdsTables) {
+        List<TdsTable> tdsTables = tdsMetadata.getTdsTables();
+        for (TdsTable table : tdsTables) {
             datasource.addElement("_.fcp.ObjectModelTableType.true...column")
                     .addAttribute("caption", table.getName())
                     .addAttribute("datatype", "table")
@@ -164,8 +166,8 @@ public class TdsBuilder {
         }
 
         // add column
-        List<TdsMetadata.TdsColumn> tdsColumns = tdsMetadata.getTdsColumns();
-        for (TdsMetadata.TdsColumn column : tdsColumns) {
+        List<TdsColumn> tdsColumns = tdsMetadata.getTdsColumns();
+        for (TdsColumn column : tdsColumns) {
             datasource.addElement("column")
                     .addAttribute("caption", column.getName())
                     .addAttribute("name", String.format("[%s]", column.getName()));
@@ -186,9 +188,9 @@ public class TdsBuilder {
 
         // ADD OBJECTS: each object is a table
         Element objectsEl = objectGraphEl.addElement("objects");
-        List<TdsMetadata.TdsTable> tdsTables = tdsMetadata.getTdsTables();
-        for (TdsMetadata.TdsTable table : tdsTables) {
-            TdsMetadata.TdsConnection tdsConnection = tdsMetadata.getTdsConnection(table.getTdsConnectionId());
+        List<TdsTable> tdsTables = tdsMetadata.getTdsTables();
+        for (TdsTable table : tdsTables) {
+            TdsConnection tdsConnection = tdsMetadata.getTdsConnection(table.getTdsConnectionId());
             Element objectEl = objectsEl.addElement("object");
             objectEl.addAttribute("caption", table.getName());
             objectEl.addAttribute("id", table.getObjectId());
@@ -205,12 +207,12 @@ public class TdsBuilder {
         }
         // ADD RELATIONSHIPS
         Element relationshipsEl = objectGraphEl.addElement("relationships");
-        List<TdsMetadata.TdsRelationship> tdsRelationships = tdsMetadata.getTdsRelationships();
-        for (TdsMetadata.TdsRelationship tdsRelationship : tdsRelationships) {
-            TdsMetadata.TdsColumn col1 = tdsRelationship.getCol1();
-            TdsMetadata.TdsColumn col2 = tdsRelationship.getCol2();
-            TdsMetadata.TdsTable tbl1 = tdsMetadata.getTdsTable(col1.getTdsTableId());
-            TdsMetadata.TdsTable tbl2 = tdsMetadata.getTdsTable(col2.getTdsTableId());
+        List<TdsRelationship> tdsRelationships = tdsMetadata.getTdsRelationships();
+        for (TdsRelationship tdsRelationship : tdsRelationships) {
+            TdsColumn col1 = tdsRelationship.getCol1();
+            TdsColumn col2 = tdsRelationship.getCol2();
+            TdsTable tbl1 = tdsMetadata.getTdsTable(col1.getTdsTableId());
+            TdsTable tbl2 = tdsMetadata.getTdsTable(col2.getTdsTableId());
 
             String operator = tdsRelationship.getOperator();
 
@@ -245,27 +247,27 @@ public class TdsBuilder {
     }
 
     private void printInfo() {
-//        for (TdsMetadata.TdsConnection tdsConnection : tdsMetadata.getTdsConnections()) {
+//        for (TdsConnection tdsConnection : tdsMetadata.getTdsConnections()) {
 //            log.info("CONNECTION => {}", tdsConnection);
 //        }
-//        for (TdsMetadata.TdsTable tdsTable : tdsMetadata.getTdsTables()) {
+//        for (TdsTable tdsTable : tdsMetadata.getTdsTables()) {
 //            log.info("TABLE => {} {}", tdsTable.getObjectId(), tdsTable.getName());
 //        }
 
-        for (TdsMetadata.TdsColumn tdsColumn : tdsMetadata.getTdsColumns()) {
-            TdsMetadata.TdsTable tdsTable = tdsMetadata.getTdsTable(tdsColumn.getTdsTableId());
+        for (TdsColumn tdsColumn : tdsMetadata.getTdsColumns()) {
+            TdsTable tdsTable = tdsMetadata.getTdsTable(tdsColumn.getTdsTableId());
             log.info("TABLE => [{}] [{}] => COLUMN [{}]", tdsTable.getObjectId(), tdsTable.getName(), tdsColumn.getName());
         }
 
-        for (TdsMetadata.TdsRelationship tdsRelationship : tdsMetadata.getTdsRelationships()) {
-            TdsMetadata.TdsColumn col1 = tdsRelationship.getCol1();
-            TdsMetadata.TdsColumn col2 = tdsRelationship.getCol2();
+        for (TdsRelationship tdsRelationship : tdsMetadata.getTdsRelationships()) {
+            TdsColumn col1 = tdsRelationship.getCol1();
+            TdsColumn col2 = tdsRelationship.getCol2();
 
-            TdsMetadata.TdsTable tbl1 = tdsMetadata.getTdsTable(col1.getTdsTableId());
-            TdsMetadata.TdsTable tbl2 = tdsMetadata.getTdsTable(col2.getTdsTableId());
+            TdsTable tbl1 = tdsMetadata.getTdsTable(col1.getTdsTableId());
+            TdsTable tbl2 = tdsMetadata.getTdsTable(col2.getTdsTableId());
         }
 //
-//        for (TdsMetadata.TdsRelationship tdsRelationship: tdsMetadata.getTdsRelationships()) {
+//        for (TdsRelationship tdsRelationship: tdsMetadata.getTdsRelationships()) {
 //            log.info("RELATIONSHIP => {}", tdsRelationship);
 //        }
     }
@@ -282,319 +284,4 @@ public class TdsBuilder {
         }
     }
 
-    public static void main(String[] args) throws Exception {
-//        demo011_1con_ntable();
-//        demo011_1con_ntable_nrelationship();
-//        demo012_ncon_ntable();
-        demo012_ncon_ntable_nrel();
-//        demo012_ncon_ntable()_nrelationship();
-    }
-
-    private static void demo011_1con_ntable() throws Exception {
-        TdsMetadata tdsMetadata = new TdsMetadata();
-        TdsMetadata.TableauInfo tableauInfo = new TdsMetadata.TableauInfo(
-                "https://t.tableau-report.com",
-                "ict_1",
-                "",
-                ""
-        );
-        tdsMetadata.setTableauInfo(tableauInfo);
-        TdsMetadata.TdsConnection conn1 = TdsMetadata.TdsConnection.createConnection(
-                "postgres",
-                "username-password",
-                "misolution_dev",
-                "",
-                "5432",
-                "3.35.93.207",
-                "misolution_dev",
-                ""
-        );
-        tdsMetadata.addTdsConnection(conn1);
-
-        TdsMetadata.TdsTable tb1 = TdsMetadata.TdsTable.createConnectionTable("public.test");
-        TdsMetadata.TdsTable tb2 = TdsMetadata.TdsTable.createConnectionTable("public.test");
-        TdsMetadata.TdsTable tb3 = TdsMetadata.TdsTable.createConnectionTable("public.test");
-        TdsMetadata.TdsTable tb4 = TdsMetadata.TdsTable.createConnectionTable("ict.migration_account");
-        TdsMetadata.TdsTable tb5 = TdsMetadata.TdsTable.createConnectionTable("ict.migration_account");
-        TdsMetadata.TdsTable tb6 = TdsMetadata.TdsTable.createConnectionTable("ict.migration_account");
-        tdsMetadata.addTdsTable(conn1, tb1);
-        tdsMetadata.addTdsTable(conn1, tb2);
-        tdsMetadata.addTdsTable(conn1, tb3);
-        tdsMetadata.addTdsTable(conn1, tb4);
-        tdsMetadata.addTdsTable(conn1, tb5);
-        tdsMetadata.addTdsTable(conn1, tb6);
-
-        TdsBuilder tdsBuilder = new TdsBuilder(tdsMetadata);
-        tdsBuilder
-                .build()
-                .writeToFile("./output/tds", "011_1con_ntbl");
-        // tabcmd publish ./output/tds/011_1con_ntbl.tds --project='ts_tds_builder' --overwrite
-    }
-
-    private static void demo011_1con_ntable_nrelationship() throws Exception {
-        TdsMetadata tdsMetadata = new TdsMetadata();
-        TdsMetadata.TableauInfo tableauInfo = new TdsMetadata.TableauInfo(
-                "https://t.tableau-report.com",
-                "ict_1",
-                "",
-                ""
-        );
-        tdsMetadata.setTableauInfo(tableauInfo);
-        TdsMetadata.TdsConnection conn1 = TdsMetadata.TdsConnection.createConnection(
-                "postgres",
-                "username-password",
-                "misolution_dev",
-                "",
-                "5432",
-                "3.35.93.207",
-                "misolution_dev",
-                ""
-        );
-        tdsMetadata.addTdsConnection(conn1);
-
-        TdsMetadata.TdsTable tb1 = TdsMetadata.TdsTable.createConnectionTable("public.test");
-        TdsMetadata.TdsTable tb2 = TdsMetadata.TdsTable.createConnectionTable("public.test");
-        TdsMetadata.TdsTable tb3 = TdsMetadata.TdsTable.createConnectionTable("public.test");
-        TdsMetadata.TdsTable tb4 = TdsMetadata.TdsTable.createConnectionTable("ict.migration_account");
-        TdsMetadata.TdsTable tb5 = TdsMetadata.TdsTable.createConnectionTable("ict.migration_account");
-        TdsMetadata.TdsTable tb6 = TdsMetadata.TdsTable.createConnectionTable("ict.migration_account");
-        tdsMetadata.addTdsTable(conn1, tb1);
-        tdsMetadata.addTdsTable(conn1, tb2);
-        tdsMetadata.addTdsTable(conn1, tb3);
-        tdsMetadata.addTdsTable(conn1, tb4);
-        tdsMetadata.addTdsTable(conn1, tb5);
-        tdsMetadata.addTdsTable(conn1, tb6);
-
-        TdsMetadata.TdsColumn col1 = new TdsMetadata.TdsColumn("name");
-        TdsMetadata.TdsColumn col2 = new TdsMetadata.TdsColumn("name");
-        TdsMetadata.TdsColumn col3 = new TdsMetadata.TdsColumn("name");
-        TdsMetadata.TdsColumn col4 = new TdsMetadata.TdsColumn("code");
-        TdsMetadata.TdsColumn col5 = new TdsMetadata.TdsColumn("code");
-        TdsMetadata.TdsColumn col6 = new TdsMetadata.TdsColumn("code");
-        tdsMetadata.addTdsColumn(tb1, col1);
-        tdsMetadata.addTdsColumn(tb2, col2);
-        tdsMetadata.addTdsColumn(tb3, col3);
-        tdsMetadata.addTdsColumn(tb4, col4);
-        tdsMetadata.addTdsColumn(tb5, col5);
-        tdsMetadata.addTdsColumn(tb6, col6);
-
-        TdsMetadata.TdsRelationship rel1 = new TdsMetadata.TdsRelationship(col1, col2);
-        TdsMetadata.TdsRelationship rel2 = new TdsMetadata.TdsRelationship(col2, col3);
-        TdsMetadata.TdsRelationship rel3 = new TdsMetadata.TdsRelationship(col1, col4);
-        TdsMetadata.TdsRelationship rel4 = new TdsMetadata.TdsRelationship(col4, col5);
-        TdsMetadata.TdsRelationship rel5 = new TdsMetadata.TdsRelationship(col1, col6);
-//        tdsMetadata.addRelationship(rel1);
-//        tdsMetadata.addRelationship(rel2);
-//        tdsMetadata.addRelationship(rel3);
-//        tdsMetadata.addRelationship(rel4);
-//        tdsMetadata.addRelationship(rel5);
-
-        TdsBuilder tdsBuilder = new TdsBuilder(tdsMetadata);
-        tdsBuilder
-                .build()
-                .writeToFile("./output/tds", "011_1con_ntbl_relationship");
-        // tabcmd publish ./output/tds/011_1con_ntbl_relationship.tds --project='ts_tds_builder' --overwrite
-    }
-
-    private static void demo012_ncon_ntable() throws Exception {
-        TdsMetadata tdsMetadata = new TdsMetadata();
-        TdsMetadata.TableauInfo tableauInfo = new TdsMetadata.TableauInfo(
-                "https://t.tableau-report.com",
-                "ict_1",
-                "",
-                ""
-        );
-        tdsMetadata.setTableauInfo(tableauInfo);
-        TdsMetadata.TdsConnection conn1 = TdsMetadata.TdsConnection.createConnection(
-                "postgres",
-                "username-password",
-                "misolution_dev",
-                "",
-                "5432",
-                "3.35.93.207",
-                "misolution_dev",
-                ""
-        );
-        TdsMetadata.TdsConnection conn2 = TdsMetadata.TdsConnection.createConnection(
-                "postgres",
-                "username-password",
-                "misolution_dev",
-                "",
-                "5432",
-                "3.35.93.207",
-                "misolution_dev",
-                ""
-        );
-        TdsMetadata.TdsConnection conn3 = TdsMetadata.TdsConnection.createConnection(
-                "postgres",
-                "username-password",
-                "misolution_dev",
-                "",
-                "5432",
-                "3.35.93.207",
-                "misolution_dev",
-                ""
-        );
-        tdsMetadata.addTdsConnection(conn1);
-        tdsMetadata.addTdsConnection(conn2);
-        tdsMetadata.addTdsConnection(conn3);
-
-        TdsMetadata.TdsTable conn1tbl1 = TdsMetadata.TdsTable.createConnectionTable("public.test");
-        TdsMetadata.TdsTable conn1tbl2 = TdsMetadata.TdsTable.createConnectionTable("public.test");
-        TdsMetadata.TdsTable conn1tbl3 = TdsMetadata.TdsTable.createConnectionTable("ict.migration_account");
-        TdsMetadata.TdsTable conn2tbl1 = TdsMetadata.TdsTable.createConnectionTable("public.test");
-        TdsMetadata.TdsTable conn2tbl2 = TdsMetadata.TdsTable.createConnectionTable("ict.migration_account");
-        TdsMetadata.TdsTable conn2tbl3 = TdsMetadata.TdsTable.createConnectionTable("ict.migration_account");
-        TdsMetadata.TdsTable conn3tbl1 = TdsMetadata.TdsTable.createConnectionTable("ict.migration_current");
-        TdsMetadata.TdsTable conn3tbl2 = TdsMetadata.TdsTable.createConnectionTable("ict.migration_history");
-        TdsMetadata.TdsTable conn3tbl3 = TdsMetadata.TdsTable.createConnectionTable("ict.migration_cost");
-        tdsMetadata.addTdsTable(conn1, conn1tbl1);
-        tdsMetadata.addTdsTable(conn1, conn1tbl2);
-        tdsMetadata.addTdsTable(conn1, conn1tbl3);
-        tdsMetadata.addTdsTable(conn2, conn2tbl1);
-        tdsMetadata.addTdsTable(conn2, conn2tbl2);
-        tdsMetadata.addTdsTable(conn2, conn2tbl3);
-        tdsMetadata.addTdsTable(conn3, conn3tbl1);
-        tdsMetadata.addTdsTable(conn3, conn3tbl2);
-        tdsMetadata.addTdsTable(conn3, conn3tbl3);
-
-        TdsMetadata.TdsColumn conn1tbl1col = new TdsMetadata.TdsColumn("name");
-        TdsMetadata.TdsColumn conn1tbl2col = new TdsMetadata.TdsColumn("name");
-        TdsMetadata.TdsColumn conn1tbl3col = new TdsMetadata.TdsColumn("code");
-        TdsMetadata.TdsColumn conn2tbl1col = new TdsMetadata.TdsColumn("name");
-        TdsMetadata.TdsColumn conn2tbl2col = new TdsMetadata.TdsColumn("code");
-        TdsMetadata.TdsColumn conn2tbl3col = new TdsMetadata.TdsColumn("code");
-        TdsMetadata.TdsColumn conn3tbl1col = new TdsMetadata.TdsColumn("code");
-        TdsMetadata.TdsColumn conn3tbl2col = new TdsMetadata.TdsColumn("code");
-        TdsMetadata.TdsColumn conn3tbl3col = new TdsMetadata.TdsColumn("code");
-        tdsMetadata.addTdsColumn(conn1tbl1, conn1tbl1col);
-        tdsMetadata.addTdsColumn(conn1tbl2, conn1tbl2col);
-        tdsMetadata.addTdsColumn(conn1tbl3, conn1tbl3col);
-        tdsMetadata.addTdsColumn(conn2tbl1, conn2tbl1col);
-        tdsMetadata.addTdsColumn(conn2tbl2, conn2tbl2col);
-        tdsMetadata.addTdsColumn(conn2tbl3, conn2tbl3col);
-        tdsMetadata.addTdsColumn(conn3tbl1, conn3tbl1col);
-        tdsMetadata.addTdsColumn(conn3tbl2, conn3tbl2col);
-        tdsMetadata.addTdsColumn(conn3tbl3, conn3tbl3col);
-
-        TdsMetadata.TdsRelationship rel1 = new TdsMetadata.TdsRelationship(conn1tbl1col, conn1tbl2col);
-        TdsMetadata.TdsRelationship rel2 = new TdsMetadata.TdsRelationship(conn2tbl1col, conn2tbl2col);
-        TdsMetadata.TdsRelationship rel3 = new TdsMetadata.TdsRelationship(conn3tbl1col, conn3tbl2col);
-        TdsMetadata.TdsRelationship rel4 = new TdsMetadata.TdsRelationship(conn3tbl3col, conn3tbl1col);
-        TdsMetadata.TdsRelationship rel5 = new TdsMetadata.TdsRelationship(conn1tbl3col, conn3tbl1col);
-        TdsMetadata.TdsRelationship rel6 = new TdsMetadata.TdsRelationship(conn1tbl2col, conn3tbl2col);
-        TdsMetadata.TdsRelationship rel7 = new TdsMetadata.TdsRelationship(conn3tbl3col, conn1tbl1col);
-//        tdsMetadata.addRelationship(rel1);
-//        tdsMetadata.addRelationship(rel2);
-//        tdsMetadata.addRelationship(rel3);
-//        tdsMetadata.addRelationship(rel4);
-//        tdsMetadata.addRelationship(rel5);
-//        tdsMetadata.addRelationship(rel6);
-//        tdsMetadata.addRelationship(rel7);
-
-        TdsBuilder tdsBuilder = new TdsBuilder(tdsMetadata);
-        tdsBuilder
-                .build()
-                .writeToFile("./output/tds", "011_ncon_ntbl");
-        // tabcmd publish ./output/tds/011_ncon_ntbl.tds --project='ts_tds_builder' --overwrite
-    }
-
-    private static void demo012_ncon_ntable_nrel() throws Exception {
-        TdsMetadata tdsMetadata = new TdsMetadata();
-        TdsMetadata.TableauInfo tableauInfo = new TdsMetadata.TableauInfo(
-                "https://t.tableau-report.com",
-                "ict_1",
-                "",
-                ""
-        );
-        tdsMetadata.setTableauInfo(tableauInfo);
-        TdsMetadata.TdsConnection conn1 = TdsMetadata.TdsConnection.createConnection(
-                "postgres",
-                "username-password",
-                "misolution_dev",
-                "",
-                "5432",
-                "3.35.93.207",
-                "misolution_dev",
-                ""
-        );
-        TdsMetadata.TdsConnection conn2 = TdsMetadata.TdsConnection.createConnection(
-                "postgres",
-                "username-password",
-                "misolution_dev",
-                "",
-                "5432",
-                "3.35.93.207",
-                "misolution_dev",
-                ""
-        );
-        TdsMetadata.TdsConnection conn3 = TdsMetadata.TdsConnection.createConnection(
-                "postgres",
-                "username-password",
-                "misolution_dev",
-                "",
-                "5432",
-                "3.35.93.207",
-                "misolution_dev",
-                ""
-        );
-        tdsMetadata.addTdsConnection(conn1);
-        tdsMetadata.addTdsConnection(conn2);
-        tdsMetadata.addTdsConnection(conn3);
-
-        TdsMetadata.TdsTable conn1tbl1 = TdsMetadata.TdsTable.createConnectionTable("public.test");
-        TdsMetadata.TdsTable conn1tbl2 = TdsMetadata.TdsTable.createConnectionTable("public.test");
-        TdsMetadata.TdsTable conn1tbl3 = TdsMetadata.TdsTable.createConnectionTable("ict.migration_account");
-        TdsMetadata.TdsTable conn2tbl1 = TdsMetadata.TdsTable.createConnectionTable("public.test");
-        TdsMetadata.TdsTable conn2tbl2 = TdsMetadata.TdsTable.createConnectionTable("ict.migration_account");
-        TdsMetadata.TdsTable conn2tbl3 = TdsMetadata.TdsTable.createConnectionTable("ict.migration_account");
-        TdsMetadata.TdsTable conn3tbl1 = TdsMetadata.TdsTable.createConnectionTable("ict.migration_current");
-        TdsMetadata.TdsTable conn3tbl2 = TdsMetadata.TdsTable.createConnectionTable("ict.migration_history");
-        TdsMetadata.TdsTable conn3tbl3 = TdsMetadata.TdsTable.createConnectionTable("ict.migration_cost");
-        tdsMetadata.addTdsTable(conn1, conn1tbl1);
-        tdsMetadata.addTdsTable(conn1, conn1tbl2);
-        tdsMetadata.addTdsTable(conn1, conn1tbl3);
-        tdsMetadata.addTdsTable(conn2, conn2tbl1);
-        tdsMetadata.addTdsTable(conn2, conn2tbl2);
-        tdsMetadata.addTdsTable(conn2, conn2tbl3);
-        tdsMetadata.addTdsTable(conn3, conn3tbl1);
-        tdsMetadata.addTdsTable(conn3, conn3tbl2);
-        tdsMetadata.addTdsTable(conn3, conn3tbl3);
-
-        TdsMetadata.TdsColumn conn1tbl1col = new TdsMetadata.TdsColumn("name");
-        TdsMetadata.TdsColumn conn1tbl2col = new TdsMetadata.TdsColumn("name");
-        TdsMetadata.TdsColumn conn1tbl3col = new TdsMetadata.TdsColumn("code");
-        TdsMetadata.TdsColumn conn2tbl1col = new TdsMetadata.TdsColumn("name");
-        TdsMetadata.TdsColumn conn2tbl2col = new TdsMetadata.TdsColumn("code");
-        TdsMetadata.TdsColumn conn2tbl3col = new TdsMetadata.TdsColumn("code");
-        TdsMetadata.TdsColumn conn3tbl1col = new TdsMetadata.TdsColumn("code");
-        TdsMetadata.TdsColumn conn3tbl2col = new TdsMetadata.TdsColumn("code");
-        TdsMetadata.TdsColumn conn3tbl3col = new TdsMetadata.TdsColumn("code");
-        tdsMetadata.addTdsColumn(conn1tbl1, conn1tbl1col);
-        tdsMetadata.addTdsColumn(conn1tbl2, conn1tbl2col);
-        tdsMetadata.addTdsColumn(conn1tbl3, conn1tbl3col);
-        tdsMetadata.addTdsColumn(conn2tbl1, conn2tbl1col);
-        tdsMetadata.addTdsColumn(conn2tbl2, conn2tbl2col);
-        tdsMetadata.addTdsColumn(conn2tbl3, conn2tbl3col);
-        tdsMetadata.addTdsColumn(conn3tbl1, conn3tbl1col);
-        tdsMetadata.addTdsColumn(conn3tbl2, conn3tbl2col);
-        tdsMetadata.addTdsColumn(conn3tbl3, conn3tbl3col);
-
-        tdsMetadata.addRelationship(new TdsMetadata.TdsRelationship(conn1tbl1col, conn1tbl2col));
-        tdsMetadata.addRelationship(new TdsMetadata.TdsRelationship(conn1tbl1col, conn1tbl3col));
-        tdsMetadata.addRelationship(new TdsMetadata.TdsRelationship(conn2tbl1col, conn2tbl2col));
-        tdsMetadata.addRelationship(new TdsMetadata.TdsRelationship(conn2tbl1col, conn2tbl3col));
-        tdsMetadata.addRelationship(new TdsMetadata.TdsRelationship(conn3tbl1col, conn3tbl2col));
-        tdsMetadata.addRelationship(new TdsMetadata.TdsRelationship(conn3tbl1col, conn3tbl1col));
-        tdsMetadata.addRelationship(new TdsMetadata.TdsRelationship(conn2tbl1col, conn3tbl2col));
-        tdsMetadata.addRelationship(new TdsMetadata.TdsRelationship(conn2tbl2col, conn3tbl3col));
-        tdsMetadata.addRelationship(new TdsMetadata.TdsRelationship(conn1tbl2col, conn3tbl1col));
-        tdsMetadata.addRelationship(new TdsMetadata.TdsRelationship(conn1tbl3col, conn3tbl3col));
-
-        TdsBuilder tdsBuilder = new TdsBuilder(tdsMetadata);
-        tdsBuilder
-                .build()
-                .writeToFile("./output/tds", "@012_ncon_ntbl_nrel.tds");
-        // tabcmd publish ./output/tds/@012_ncon_ntbl_nrel.tds --project='ts_tds_builder' --overwrite
-    }
 }

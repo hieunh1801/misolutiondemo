@@ -28,6 +28,7 @@ def os = System.getProperty("os.name").toLowerCase()
 def isWindows = os.contains("win")
 def isMac = os.contains("mac")
 def isLinux = os.contains("nix") || os.contains("nux") || os.contains("linux")
+
 dependencies {
     implementation 'com.opencsv:opencsv:5.9'
     implementation 'org.springframework.boot:spring-boot-starter-web'

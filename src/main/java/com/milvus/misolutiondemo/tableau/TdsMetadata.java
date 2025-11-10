@@ -32,6 +32,25 @@ public class TdsMetadata {
     private Map<String, Integer> tableNameMap = new HashMap<>();
     private Set<String> columnNameSet = new HashSet<>();
 
+    private static void dfsTraverse(
+            String node,
+            Map<String, List<String>> graph,
+            List<String> sortedList
+    ) {
+        if (sortedList.contains(node)) {
+            log.info("NODE={} => X (VISITED)", node);
+            return;
+        }
+
+        sortedList.add(node);
+        List<String> children = graph.getOrDefault(node, new ArrayList<>());
+        log.info("NODE={} => GRAPH={}", node, children);
+
+        for (String childNode : children) {
+            dfsTraverse(childNode, graph, sortedList);
+        }
+    }
+
     public TdsConnection addTdsConnection(TdsConnection tdsConnection) {
         this.tdsConnections.add(tdsConnection);
         this.tdsConnectionMap.put(tdsConnection.getId(), tdsConnection);
@@ -144,25 +163,6 @@ public class TdsMetadata {
                     .toString();
             tdsTable.setObjectId(objectId);
             tdsTable.setOrder(objectCount);
-        }
-    }
-
-    private static void dfsTraverse(
-            String node,
-            Map<String, List<String>> graph,
-            List<String> sortedList
-    ) {
-        if (sortedList.contains(node)) {
-            log.info("NODE={} => X (VISITED)", node);
-            return;
-        }
-
-        sortedList.add(node);
-        List<String> children = graph.getOrDefault(node, new ArrayList<>());
-        log.info("NODE={} => GRAPH={}", node, children);
-
-        for (String childNode : children) {
-            dfsTraverse(childNode, graph, sortedList);
         }
     }
 
@@ -332,6 +332,7 @@ public class TdsMetadata {
         public static TdsConnection createCsvConnection(String connectionDirectory, String connectionFilename) {
             TdsConnection tdsConnection = new TdsConnection();
             tdsConnection.setType("data");
+            tdsConnection.setConnectionClass("textscan");
             tdsConnection.setConnectionDirectory(connectionDirectory);
             tdsConnection.setConnectionFilename(connectionFilename);
 
@@ -392,7 +393,7 @@ public class TdsMetadata {
          * @param name: this is table name
          * @return tdsTale
          */
-        public TdsTable createCsvTable(String name, String fileName) {
+        public static TdsTable createCsvTable(String name, String fileName) {
             TdsTable tdsTable = new TdsTable();
             tdsTable.name = name;
             tdsTable.table = String.format("[%s#csv]", fileName);
